@@ -1,0 +1,243 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#172d2a" />
+    <meta name="description" content="Converge：让分歧形成共识，让共识落实为行动。" />
+    <title>Converge · 共识行动工作台</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar">
+        <a class="brand" href="#dashboard" aria-label="Converge 首页">
+          <span class="brand-mark" aria-hidden="true">
+            <svg viewBox="0 0 40 40" role="img">
+              <path d="M9 11.5h13.5a7.5 7.5 0 0 1 0 15H18" />
+              <path d="m14 21 4 5.5-4 5.5" />
+              <circle cx="10" cy="11.5" r="2.5" />
+            </svg>
+          </span>
+          <span><strong>Converge</strong><small>共识行动工作台</small></span>
+        </a>
+
+        <nav class="side-nav" aria-label="主导航">
+          <button class="nav-item active" data-view="dashboard">
+            <span class="nav-icon">⌂</span><span>今日概览</span>
+          </button>
+          <button class="nav-item" data-view="decisions">
+            <span class="nav-icon">◎</span><span>协商中的议题</span><b id="nav-decisions" class="nav-count">0</b>
+          </button>
+          <button class="nav-item" data-view="candidates">
+            <span class="nav-icon">✦</span><span>讨论整理</span><b id="nav-pending" class="nav-count">0</b>
+          </button>
+          <button class="nav-item" data-view="board">
+            <span class="nav-icon">▦</span><span>行动看板</span>
+          </button>
+          <button class="nav-item" data-view="reminders">
+            <span class="nav-icon">◷</span><span>提醒与报告</span><b id="nav-attention" class="nav-dot" hidden></b>
+          </button>
+          <button class="nav-item" data-view="audit">
+            <span class="nav-icon">⌁</span><span>审计轨迹</span>
+          </button>
+        </nav>
+
+        <div class="sidebar-note">
+          <div class="privacy-icon">✓</div>
+          <div><strong>共识安全模式</strong><span>硬约束优先，决策与行动都需确认</span></div>
+        </div>
+        <div class="sidebar-footer" id="provider-footer">正在检查模型配置…</div>
+      </aside>
+
+      <main class="main-shell">
+        <header class="topbar">
+          <button class="mobile-menu" id="mobile-menu" aria-label="打开菜单">☰</button>
+          <div class="clock-summary">
+            <span class="live-dot"></span>
+            <span>模拟时钟</span>
+            <strong id="top-clock">--</strong>
+          </div>
+          <div class="top-actions">
+            <span class="provider-pill" id="provider-pill"><i></i><span>检查模型</span></span>
+            <button class="button button-ghost compact" id="reset-button" title="清空本地演示数据">重置</button>
+            <button class="button button-primary compact" data-open-import>＋ 导入讨论</button>
+          </div>
+        </header>
+
+        <div class="page-wrap">
+          <section class="view active" id="view-dashboard">
+            <div class="hero">
+              <div class="hero-copy">
+                <p class="eyebrow">DISCUSSION → CONSENSUS → ACTION · <span id="today-label">今日</span></p>
+                <h1>导入一场讨论，<br /><em>看清真正的下一步。</em></h1>
+                <p class="hero-description">Converge 判断讨论是仍需汇总约束、比较方案，还是已经形成明确行动；前者继续协商，后者进入确认，最终都追踪到完成。</p>
+                <div class="hero-actions">
+                  <button class="button button-primary" data-open-import>导入讨论记录 <span>↗</span></button>
+                  <button class="button button-secondary" id="decision-demo-button">导入聚餐讨论示例</button>
+                </div>
+              </div>
+              <div class="hero-art" aria-hidden="true">
+                <div class="orbit orbit-one"></div>
+                <div class="orbit orbit-two"></div>
+                <div class="trace-card trace-card-one">
+                  <span class="avatar avatar-mint">林</span>
+                  <p>周五聚餐还没定<br />人均 150 内 · 不吃花生</p>
+                </div>
+                <div class="trace-path"><i></i><i></i><i></i></div>
+                <div class="trace-card trace-card-two">
+                  <span class="tiny-check">✓</span>
+                  <div><small>讨论成熟度诊断</small><strong>需要继续协商</strong></div>
+                  <b>3 人约束</b>
+                </div>
+              </div>
+            </div>
+
+            <div class="stats-grid" aria-label="工作台统计">
+              <article class="stat-card"><span>协商中议题</span><strong id="stat-decisions">0</strong><small>约束、方案与投票</small></article>
+              <article class="stat-card accent"><span>待整理事项</span><strong id="stat-pending">0</strong><small>议题或行动均需确认</small></article>
+              <article class="stat-card"><span>正式任务</span><strong id="stat-tasks">0</strong><small>已确认的行动</small></article>
+              <article class="stat-card warning"><span>需要关注</span><strong id="stat-attention">0</strong><small>临期、逾期或阻塞</small></article>
+            </div>
+
+            <section class="panel dashboard-decisions">
+              <div class="panel-head">
+                <div><p class="section-kicker">FROM CONSTRAINTS TO CONSENSUS</p><h2>协商进展</h2></div>
+                <button class="text-button" data-view-link="decisions">查看协商 <span>→</span></button>
+              </div>
+              <div id="dashboard-decisions" class="decision-mini-grid"></div>
+            </section>
+
+            <div class="dashboard-grid">
+              <section class="panel dashboard-pending">
+                <div class="panel-head">
+                  <div><p class="section-kicker">DISCUSSION ROUTING</p><h2>刚识别的讨论事项</h2></div>
+                  <button class="text-button" data-view-link="candidates">查看全部 <span>→</span></button>
+                </div>
+                <div id="dashboard-candidates" class="mini-list"></div>
+              </section>
+              <section class="panel dashboard-flow">
+                <div class="panel-head">
+                  <div><p class="section-kicker">CLOSED LOOP</p><h2>今日闭环</h2></div>
+                  <span class="safe-chip">未发送外部消息</span>
+                </div>
+                <div id="dashboard-flow" class="flow-list"></div>
+              </section>
+            </div>
+          </section>
+
+          <section class="view" id="view-decisions">
+            <div class="page-heading">
+              <div><p class="eyebrow">CONSTRAINTS → PARETO → VOTE → ACTION</p><h1>协商中的议题</h1><p>这些议题都来自已导入并确认的讨论。硬约束先过滤，软偏好再比较，最终结果经投票确认后进入行动闭环。</p></div>
+              <div class="decision-heading-actions">
+                <button class="button button-primary" data-open-import>＋ 导入新讨论</button>
+              </div>
+            </div>
+            <div id="decision-workspace"></div>
+          </section>
+
+          <section class="view" id="view-candidates">
+            <div class="page-heading">
+              <div><p class="eyebrow">DISCUSSION ROUTING</p><h1>讨论整理</h1><p>系统先判断哪些议题需要继续协商、哪些内容已经形成行动；每一项都保留原文证据并等待你确认。</p></div>
+              <button class="button button-primary" data-open-import>＋ 导入更多讨论</button>
+            </div>
+            <div class="filter-row" role="tablist" aria-label="候选筛选">
+              <button class="filter-chip active" data-filter="open">待处理 <b id="filter-open-count">0</b></button>
+              <button class="filter-chip" data-filter="approved">已确认</button>
+              <button class="filter-chip" data-filter="rejected">已忽略</button>
+              <button class="filter-chip" data-filter="all">全部</button>
+            </div>
+            <div id="candidate-list" class="candidate-list"></div>
+          </section>
+
+          <section class="view" id="view-board">
+            <div class="page-heading">
+              <div><p class="eyebrow">COMMITTED ACTIONS</p><h1>行动看板</h1><p>无论来自明确承诺还是群体共识，只有人工确认后的行动才会出现在这里。</p></div>
+              <div class="board-heading-tools"><div class="legend"><span><i class="health-dot due"></i>临期</span><span><i class="health-dot overdue"></i>逾期</span><span><i class="health-dot safe"></i>正常</span></div><a class="button button-ghost compact" href="/api/export/tasks.ics" download>导出 .ics</a></div>
+            </div>
+            <div id="task-board" class="board"></div>
+          </section>
+
+          <section class="view" id="view-reminders">
+            <div class="page-heading">
+              <div><p class="eyebrow">FOLLOW THROUGH</p><h1>提醒与闭环报告</h1><p>推进本地模拟时钟，查看临期、逾期和阻塞任务。所有提醒都只生成草稿。</p></div>
+            </div>
+            <section class="clock-panel">
+              <div class="clock-visual"><span>◷</span><div><small>当前模拟时间</small><strong id="clock-large">--</strong></div></div>
+              <form id="clock-form" class="clock-form">
+                <label for="clock-input">推进到</label>
+                <input id="clock-input" type="datetime-local" required />
+                <button class="button button-dark" type="submit">更新时间</button>
+              </form>
+              <p>改变模拟时间不会修改真实系统时间。</p>
+            </section>
+            <div class="reminder-layout">
+              <section class="panel">
+                <div class="panel-head"><div><p class="section-kicker">DRAFT QUEUE</p><h2>待发送提醒</h2></div><span id="reminder-count" class="number-chip">0</span></div>
+                <div id="reminder-list" class="reminder-list"></div>
+              </section>
+              <section class="panel report-panel">
+                <div class="panel-head"><div><p class="section-kicker" id="report-kicker">DAILY DIGEST</p><h2 id="report-title">闭环日报</h2></div><div class="report-actions"><span class="segmented"><button class="active" data-report-scope="daily">日</button><button data-report-scope="weekly">周</button></span><button id="download-report" class="button button-ghost compact">下载 .md</button></div></div>
+                <pre id="digest-output"></pre>
+              </section>
+            </div>
+          </section>
+
+          <section class="view" id="view-audit">
+            <div class="page-heading">
+              <div><p class="eyebrow">AUDITABLE BY DESIGN</p><h1>审计轨迹</h1><p>抽取判断、人工审批、提交动作和状态变化都有据可查。</p></div>
+              <span class="safe-chip">只读时间线</span>
+            </div>
+            <section class="audit-summary">
+              <div><strong id="audit-count">0</strong><span>条审计事件</span></div>
+              <div><strong id="model-token-count">0</strong><span>模型 Token</span></div>
+              <p id="model-last-call">外部内容始终按不可信数据处理，不能改变审批规则。</p>
+            </section>
+            <div id="audit-list" class="audit-list"></div>
+          </section>
+        </div>
+      </main>
+    </div>
+
+    <dialog id="import-dialog" class="modal">
+      <form method="dialog" class="modal-card" id="import-form">
+        <div class="modal-head">
+          <div><p class="section-kicker">IMPORT DISCUSSION</p><h2>导入一次讨论</h2><p>系统会判断它需要继续协商，还是已经可以落实为行动。</p></div>
+          <button class="icon-button" id="close-import" type="button" aria-label="关闭">×</button>
+        </div>
+        <label class="dropzone" id="dropzone" for="file-input">
+          <input id="file-input" type="file" accept=".txt,.md,.json,text/plain,application/json,text/markdown" />
+          <span class="upload-icon">⇧</span>
+          <strong id="drop-title">拖入文件，或点击选择</strong>
+          <small id="drop-detail">最大 5 MB · UTF-8 编码</small>
+        </label>
+        <div class="or"><span>或者直接粘贴</span></div>
+        <label class="field-label" for="paste-input">对话内容</label>
+        <textarea id="paste-input" rows="7" placeholder="[2026-09-03 10:00] 安然：周五聚餐还没定，大家说下预算和忌口。&#10;[2026-09-03 10:02] 小林：人均 150 内，不能有花生，最好安静。"></textarea>
+        <fieldset class="extractor-options">
+          <legend>识别方式</legend>
+          <label class="extractor-card active">
+            <input type="radio" name="extractor" value="auto" checked />
+            <span class="extractor-glyph">✦</span>
+            <span><strong>智能增强</strong><small id="smart-mode-detail">优先 DeepSeek，失败时安全回退</small></span>
+            <b>推荐</b>
+          </label>
+          <label class="extractor-card">
+            <input type="radio" name="extractor" value="rules" />
+            <span class="extractor-glyph rules">⌁</span>
+            <span><strong>本地 Baseline</strong><small>不发送到模型，适合敏感内容</small></span>
+          </label>
+        </fieldset>
+        <p class="privacy-disclosure" id="privacy-disclosure">智能增强模式会把本次对话发送给已配置的 DeepSeek API；密钥仅从服务端环境变量读取。</p>
+        <div class="modal-actions">
+          <span id="import-hint">只生成待确认的议题或行动</span>
+          <button class="button button-primary" id="import-submit" value="default">整理这场讨论 <span>→</span></button>
+        </div>
+      </form>
+    </dialog>
+
+    <div id="toast-region" class="toast-region" aria-live="polite"></div>
+    <div id="loading" class="loading-overlay" hidden><span class="spinner"></span><p>正在判断讨论的下一步…</p></div>
+    <script src="/app.js" defer></script>
+  </body>
+</html>

@@ -1,0 +1,33 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 1920
+PlayResY: 1080
+WrapStyle: 2
+ScaledBorderAndShadow: yes
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei UI,31,&H00FFFFFF,&H000000FF,&H00122118,&H40122118,0,0,0,0,100,100,0,0,3,10,0,2,150,150,30,1
+Style: Meta,Microsoft YaHei UI,20,&H002A5542,&H000000FF,&H00FFFFFF,&H22F7F4EC,0,0,0,0,100,100,0.3,0,3,7,0,7,94,40,92,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 1,0:00:00.00,0:01:08.26,Meta,,0,0,0,,真实产品录屏  ·  等待过程已剪辑
+Dialogue: 0,0:00:00.00,0:00:04.20,Default,,0,0,0,,这是 SourceLens 的真实网页。输入待核查命题：\N“鱼油中的 DHA 成分对成年人无效”。
+Dialogue: 0,0:00:04.20,0:00:08.20,Default,,0,0,0,,点击“开始核查”，触发真实 DeepSeek 多 Agent 分析。
+Dialogue: 0,0:00:08.20,0:00:10.81,Default,,0,0,0,,Planner 先处理歧义，把笼统的“无效”拆成可检验问题。
+Dialogue: 0,0:00:10.81,0:00:13.21,Default,,0,0,0,,系统按科研路线检索 PubMed、OpenAlex 等来源。
+Dialogue: 0,0:00:13.21,0:00:16.41,Default,,0,0,0,,Matching 与 Quality 两个 Agent 使用隔离上下文独立核验。
+Dialogue: 0,0:00:16.41,0:00:19.86,Default,,0,0,0,,Final Judge 接收结构化证据；结论不是 Agent 多数投票。
+Dialogue: 0,0:00:19.86,0:00:24.01,Default,,0,0,0,,等待过程已剪辑。以下是同一次真实运行：1dc557eb… · 28,838 tokens。
+Dialogue: 0,0:00:24.01,0:00:27.51,Default,,0,0,0,,总体结论：已找到相关材料，但证据仍不足。\N共 14 项证据，其中 11 项可读。
+Dialogue: 0,0:00:27.51,0:00:31.21,Default,,0,0,0,,先界定成年人、DHA 和“有效”的含义，再展示三个核查分支。
+Dialogue: 0,0:00:31.21,0:00:35.11,Default,,0,0,0,,核查点一：现有证据不足以断言 DHA 对成人认知功能无显著作用。
+Dialogue: 0,0:00:35.11,0:00:38.81,Default,,0,0,0,,来源质量 Agent 独立检查设计、偏倚、直接性、精度与完整性。
+Dialogue: 0,0:00:38.81,0:00:41.26,Default,,0,0,0,,展开五维检查，并查看能够追溯到原始页面的科研证据。
+Dialogue: 0,0:00:41.26,0:00:46.26,Default,,0,0,0,,核查点二：心血管硬结局单独判断，避免用一个结局替代全部健康效果。
+Dialogue: 0,0:00:46.26,0:00:51.61,Default,,0,0,0,,再进入指标与安全性分支；指标变化不自动等于净健康获益。
+Dialogue: 0,0:00:51.61,0:00:54.95,Default,,0,0,0,,三个分支分别给出证据、未知项和有边界结论。
+Dialogue: 0,0:00:54.95,0:00:58.95,Default,,0,0,0,,方法区公开每个 Agent 的职责、模型、状态和上下文策略。
+Dialogue: 0,0:00:58.95,0:01:04.10,Default,,0,0,0,,同一个 API 可以发起多个隔离请求；\N多 Agent 的价值在于独立交叉核验，而不是共享一个答案。
+Dialogue: 0,0:01:04.10,0:01:08.26,Default,,0,0,0,,结论：不能据现有材料接受“对成年人无效”的全称判断；\N但这也不等于 DHA 对所有健康结局都有效。

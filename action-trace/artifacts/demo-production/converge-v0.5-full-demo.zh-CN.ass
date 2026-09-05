@@ -1,0 +1,30 @@
+[Script Info]
+Title: Converge 0.5 Chinese captions
+ScriptType: v4.00+
+PlayResX: 1920
+PlayResY: 1080
+ScaledBorderAndShadow: yes
+WrapStyle: 2
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Caption,Microsoft YaHei,34,&H00F7FBF8,&H00FFFFFF,&H00142F2A,&H00142F2A,-1,0,0,0,100,100,0,0,3,8,0,2,150,150,27,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:04.74,0:00:08.54,Caption,,0,0,0,,所有流程从一次「导入讨论」开始，用户不必预先选择工具。
+Dialogue: 0,0:00:08.54,0:00:12.43,Caption,,0,0,0,,系统识别出尚未形成共识的议题，并保留原文与行号。
+Dialogue: 0,0:00:12.43,0:00:16.72,Caption,,0,0,0,,3 位参与者和 4 个方案已从群聊预填；私密预算只显示“已识别”。
+Dialogue: 0,0:00:16.72,0:00:20.18,Caption,,0,0,0,,人工核对后才进入协商，系统不会静默创建决策。
+Dialogue: 0,0:00:20.18,0:00:24.91,Caption,,0,0,0,,协商空间继承原讨论：每项约束和候选方案都有来源。
+Dialogue: 0,0:00:24.91,0:00:29.45,Caption,,0,0,0,,硬约束决定方案能否进入比较；软偏好只影响满意度。
+Dialogue: 0,0:00:29.45,0:00:33.87,Caption,,0,0,0,,四个方案经过确定性校验：两个因距离或预算冲突被淘汰。
+Dialogue: 0,0:00:33.87,0:00:40.08,Caption,,0,0,0,,剩下两个方案位于 Pareto 前沿，不存在让所有人都更好的替代方案。
+Dialogue: 0,0:00:40.08,0:00:46.28,Caption,,0,0,0,,每个人可以认可多个可接受方案，多数票不能覆盖任何人的硬约束。
+Dialogue: 0,0:00:46.28,0:00:51.28,Caption,,0,0,0,,阿哲完成投票；结果提供建议，但不会自动替主持人拍板。
+Dialogue: 0,0:00:51.28,0:00:55.62,Caption,,0,0,0,,推荐综合认可票、最低满意度与平均满意度，主持人保留最终选择权。
+Dialogue: 0,0:00:55.62,0:01:00.64,Caption,,0,0,0,,确认后，方案、投票与原文依据一起转为可追踪任务。
+Dialogue: 0,0:01:00.64,0:01:05.30,Caption,,0,0,0,,共同决定不会停在投票页，后续行动直接进入行动看板。
+Dialogue: 0,0:01:05.30,0:01:10.04,Caption,,0,0,0,,负责人推进任务状态，系统同步记录版本与审计轨迹。
+Dialogue: 0,0:01:10.04,0:01:14.89,Caption,,0,0,0,,完成、提醒和报告共用同一条证据链；外部提醒默认仍是草稿。
+Dialogue: 0,0:01:14.89,0:01:19.93,Caption,,0,0,0,,分流、人工确认、投票、任务提交和状态变化都可审计。

@@ -1,0 +1,1617 @@
+{
+  "id": "22067e6a-98bd-4948-9874-44f374412886",
+  "createdAt": "2026-09-04T00:42:47.752Z",
+  "input": {
+    "kind": "text",
+    "characterCount": 17,
+    "ocrApplied": false
+  },
+  "sourceText": "鱼油中的 DHA 成分对成年人无效",
+  "questionProfile": {
+    "summary": "评估鱼油中的DHA成分对成年人的有效性",
+    "ambiguityLevel": "material",
+    "interpretations": [
+      {
+        "id": "interpretation-1",
+        "label": "功能性结局",
+        "description": "核查认知、记忆等能够直接测量的功能结局。",
+        "routes": [
+          "scientific"
+        ]
+      },
+      {
+        "id": "interpretation-2",
+        "label": "临床结局",
+        "description": "核查发病、死亡或心血管事件等临床结局。",
+        "routes": [
+          "scientific",
+          "statistics"
+        ]
+      },
+      {
+        "id": "interpretation-3",
+        "label": "指标与安全性",
+        "description": "核查血脂等生物指标和不良反应；指标变化不自动等于净健康获益。",
+        "routes": [
+          "scientific"
+        ]
+      }
+    ],
+    "operationalDefinitions": [
+      {
+        "term": "成年人",
+        "definition": "年龄≥18岁的一般人群，不包括特定疾病患者或特殊生理状态（如孕妇）",
+        "status": "assumed"
+      },
+      {
+        "term": "有效",
+        "definition": "未明确具体结局，需按功能性结局、硬临床结局、指标/安全性分别核查",
+        "status": "needs_clarification"
+      }
+    ],
+    "strategy": "branched",
+    "clarificationQuestion": "你关心哪一种具体健康结局？系统将先按功能、临床结局和指标/安全性分别核查。",
+    "routes": [
+      "scientific",
+      "statistics"
+    ],
+    "rationale": "用户主张宽泛，'有效'未定义具体结局，需拆分为功能性结局、硬临床结局、指标/安全性三个互补核查点。 确定性范围护栏将未定义的“有效/无效”拆成不同结局，且不扩展人群。",
+    "profiledBy": "llm"
+  },
+  "summary": {
+    "headline": "可靠来源之间存在尚未解决的冲突",
+    "verdict": "disputed",
+    "claimCount": 3,
+    "evidenceCount": 16,
+    "readableEvidenceCount": 14,
+    "unknownCount": 3,
+    "riskCount": 0
+  },
+  "claims": [
+    {
+      "id": "claim-1",
+      "text": "鱼油中的DHA成分对成年人的功能性结局（如认知功能、视觉功能）无效",
+      "query": "鱼油中的DHA成分对成年人的功能性结局（如认知功能、视觉功能）无效",
+      "entities": [
+        "DHA",
+        "成年人"
+      ],
+      "verdict": "disputed",
+      "verdictLabel": "存在可靠冲突",
+      "confidence": 0.26759999999999995,
+      "conclusion": "关于DHA对成年人功能性结局（认知、视觉）无效的主张，现有证据相互矛盾，不能得出明确结论。",
+      "reasoningSummary": "支持无效的证据包括一项系统综述（claim-1-oa-6e3444756c）和两项RCT（claim-1-oa-fdebc6250b、claim-1-pm-21864417），但其中两项干预为EPA+DHA联合，不能单独归因于DHA。反驳无效的证据包括三项RCT（claim-1-oa-6c0e889608、claim-1-oa-c19725bc79、claim-1-pm-40044083），显示DHA在MCI或年龄相关认知衰退老年人中改善认知，但人群并非健康成年人。证据在人群、干预和结局上存在异质性，且视觉功能结局缺乏直接证据。",
+      "evidence": [
+        {
+          "id": "claim-1-oa-6e3444756c",
+          "title": "Docosahexaenoic Acid and Adult Memory: A Systematic Review and Meta-Analysis",
+          "url": "https://doi.org/10.1371/journal.pone.0120391",
+          "domain": "doi.org",
+          "publishedAt": "2015-03-18",
+          "accessedAt": "2026-09-04T00:41:52.243Z",
+          "quote": "INTRODUCTION: Subjective memory complaints are common with aging. Docosahexaenoic acid (DHA; 22:6 n-3) is a long-chain polyunsaturated fatty acid (LCPUFA) and an integral part of neural membrane phospholipids that impacts brain structure and function. Past research demonstrates a positive association between DHA plasma status/dietary intake and cognitive function. OBJECTIVES: The current meta-analysis was designed to determine the effect of DHA intake, alone or combined with eicosapentaenoic acid (EPA; 20:5 n-3), on specific memory domains: episodic, working, and semantic in healthy adults aged 18 years and older. A secondary objective was to systematically review/summarize the related obs…",
+          "quoteType": "abstract",
+          "relation": "supporting_context",
+          "relevance": 1,
+          "sourceKind": "系统综述（OpenAlex 索引）",
+          "sourceCategory": "systematic_review",
+          "provider": "openalex",
+          "doi": "10.1371/journal.pone.0120391",
+          "quality": {
+            "score": 86,
+            "label": "较高",
+            "reasons": [
+              "由 OpenAlex 学术索引发现",
+              "标题或摘要明确标识为系统综述/Meta 分析；仍需检查综述方法",
+              "已取得摘要，方法和结果仍需全文复核"
+            ]
+          },
+          "promptInjectionIgnored": false,
+          "searchQuery": "docosahexaenoic acid supplementation healthy adults cognitive function randomized controlled trial null result",
+          "searchRound": 2,
+          "provenanceGroup": "prov-305c555e49",
+          "trust": {
+            "overall": 0.8548000000000001,
+            "sourcePrior": 0.88,
+            "routeFit": 0.98,
+            "primaryness": 0.78,
+            "freshness": 0.56,
+            "independence": 0.92,
+            "label": "较高",
+            "reasons": [
+              "来源类别：systematic_review",
+              "与scientific路线适配度 98%",
+              "本轮未发现明显同源复制",
+              "取得可核对内容"
+            ],
+            "model": "rules-v1"
+          },
+          "relationExplanation": "系统综述和荟萃分析专门评估DHA（单独或与EPA联合）对健康成人记忆域的影响，结论为无效，直接支持命题。",
+          "evidenceRole": "direct",
+          "directness": 0.9,
+          "routeFit": 0.98,
+          "rankerExplanation": "系统综述和荟萃分析专门评估DHA（单独或与EPA联合）对健康成人记忆域的影响，结论为无效，直接支持命题。"
+        },
+        {
+          "id": "claim-1-oa-6c0e889608",
+          "title": "Effects of DHA Supplementation on Hippocampal Volume and Cognitive Function in Older Adults with Mild Cognitive Impairment: A 12-Month Randomized, Double-Blind, Placebo-Controlled Trial",
+          "url": "https://doi.org/10.3233/jad-160439",
+          "domain": "doi.org",
+          "publishedAt": "2016-10-01",
+          "accessedAt": "2026-09-04T00:41:27.874Z",
+          "quote": "Docosahexaenoic acid (DHA) is important for brain function, and higher DHA intake is inversely correlated with relative risk of Alzheimer's disease. The potential benefits of DHA supplementation in people with mild cognitive impairment (MCI) have not been fully examined. Our study aimed to determine the effect of DHA supplementation on cognitive function and hippocampal atrophy in elderly subjects with MCI. This was a randomized, double-blind, placebo-controlled trial in Tianjin, China. 240 individuals with MCI aged 65 years and over were recruited and equalized randomly allocated to the DHA or the placebo group. Participants received 12-month DHA supplementation (2 g/day) or corn oil as p…",
+          "quoteType": "abstract",
+          "relation": "counter_signal",
+          "relevance": 1,
+          "sourceKind": "学术研究（OpenAlex 索引）",
+          "sourceCategory": "academic_paper",
+          "provider": "openalex",
+          "doi": "10.3233/jad-160439",
+          "quality": {
+            "score": 76,
+            "label": "较高",
+            "reasons": [
+              "由 OpenAlex 学术索引发现",
+              "单篇研究不能自动代表领域共识",
+              "已取得摘要，方法和结果仍需全文复核"
+            ]
+          },
+          "promptInjectionIgnored": false,
+          "searchQuery": "DHA supplementation cognitive function adults randomized controlled trial",
+          "searchRound": 1,
+          "provenanceGroup": "prov-46be12a63d",
+          "trust": {
+            "overall": 0.8537000000000001,
+            "sourcePrior": 0.75,
+            "routeFit": 0.92,
+            "primaryness": 0.92,
+            "freshness": 0.75,
+            "independence": 0.92,
+            "label": "较高",
+            "reasons": [
+              "来源类别：academic_paper",
+              "与scientific路线适配度 92%",
+              "本轮未发现明显同源复制",
+              "取得可核对内容"
+            ],
+            "model": "rules-v1"
+          },
+          "relationExplanation": "RCT显示DHA补充（2g/d）改善MCI老年人认知功能，直接反驳命题，但人群为MCI患者，非健康成年人。",
+          "evidenceRole": "direct",
+          "directness": 0.9,
+          "routeFit": 0.92,
+          "rankerExplanation": "RCT显示DHA补充（2g/d）改善MCI老年人认知功能，直接反驳命题。"
+        },
+        {
+          "id": "claim-1-oa-c19725bc79",
+          "title": "Beneficial effects of docosahexaenoic acid on cognition in age‐related cognitive decline",
+          "url": "https://doi.org/10.1016/j.jalz.2010.01.013",
+          "domain": "doi.org",
+          "publishedAt": "2010-05-01",
+          "accessedAt": "2026-09-04T00:41:27.874Z",
+          "quote": "BACKGROUND: Docosahexaenoic acid (DHA) plays an important role in neural function. Decreases in plasma DHA are associated with cognitive decline in healthy elderly adults and in patients with Alzheimer's disease. Higher DHA intake is inversely correlated with relative risk of Alzheimer's disease. The potential benefits of DHA supplementation in age-related cognitive decline (ARCD) have not been fully examined. OBJECTIVE: Determine effects of DHA administration on improving cognitive functions in healthy older adults with ARCD. METHODS: Randomized, double-blind, placebo-controlled, clinical study was conducted at 19 U.S. clinical sites. A total of 485 healthy subjects, aged ≥55 with Mini-Me…",
+          "quoteType": "abstract",
+          "relation": "counter_signal",
+          "relevance": 1,
+          "sourceKind": "学术研究（OpenAlex 索引）",
+          "sourceCategory": "academic_paper",
+          "provider": "openalex",
+          "doi": "10.1016/j.jalz.2010.01.013",
+          "quality": {
+            "score": 76,
+            "label": "较高",
+            "reasons": [
+              "由 OpenAlex 学术索引发现",
+              "单篇研究不能自动代表领域共识",
+              "已取得摘要，方法和结果仍需全文复核"
+            ]
+          },
+          "promptInjectionIgnored": false,
+          "searchQuery": "DHA supplementation cognitive function adults randomized controlled trial",
+          "searchRound": 1,
+          "provenanceGroup": "prov-a0aef67399",
+          "trust": {
+            "overall": 0.8309000000000002,
+            "sourcePrior": 0.75,
+            "routeFit": 0.92,
+            "primaryness": 0.92,
+            "freshness": 0.56,
+            "independence": 0.92,
+            "label": "较高",
+            "reasons": [
+              "来源类别：academic_paper",
+              "与scientific路线适配度 92%",
+              "本轮未发现明显同源复制",
+              "取得可核对内容"
+            ],
+            "model": "rules-v1"
+          },
+          "relationExplanation": "RCT显示DHA补充改善年龄相关认知衰退老年人的认知功能，直接反驳命题，但人群为ARCD患者。",
+          "evidenceRole": "direct",
+          "directness": 0.9,
+          "routeFit": 0.92,
+          "rankerExplanation": "RCT显示DHA补充改善年龄相关认知衰退老年人的认知功能，直接反驳命题。"
+        },
+        {
+          "id": "claim-1-oa-fdebc6250b",
+          "title": "No effect ofn-3 long-chain polyunsaturated fatty acid (EPA and DHA) supplementation on depressed mood and cognitive function: a randomised controlled trial",
+          "url": "https://doi.org/10.1017/s0007114507801097",
+          "domain": "doi.org",
+          "publishedAt": "2007-10-24",
+          "accessedAt": "2026-09-04T00:41:52.211Z",
+          "quote": "Low dietary intakes of the n-3 long-chain PUFA (LCPUFA) EPA and DHA are thought to be associated with increased risk for a variety of adverse outcomes, including some psychiatric disorders. Evidence from observational and intervention studies for a role of n-3 LCPUFA in depression is mixed, with some support for a benefit of EPA and/or DHA in major depressive illness. The present study was a double-blind randomised controlled trial that evaluated the effects of EPA+DHA supplementation (1.5 g/d) on mood and cognitive function in mild to moderately depressed individuals. Of 218 participants who entered the trial, 190 completed the planned 12 weeks intervention. Compliance, confirmed by plasm…",
+          "quoteType": "abstract",
+          "relation": "supporting_context",
+          "relevance": 1,
+          "sourceKind": "系统综述（OpenAlex 索引）",
+          "sourceCategory": "systematic_review",
+          "provider": "openalex",
+          "doi": "10.1017/s0007114507801097",
+          "quality": {
+            "score": 86,
+            "label": "较高",
+            "reasons": [
+              "由 OpenAlex 学术索引发现",
+              "标题或摘要明确标识为系统综述/Meta 分析；仍需检查综述方法",
+              "已取得摘要，方法和结果仍需全文复核"
+            ]
+          },
+          "promptInjectionIgnored": false,
+          "searchQuery": "DHA supplementation visual function adults randomized controlled trial no effect",
+          "searchRound": 2,
+          "provenanceGroup": "prov-ff8ed4a012",
+          "trust": {
+            "overall": 0.8548000000000001,
+            "sourcePrior": 0.88,
+            "routeFit": 0.98,
+            "primaryness": 0.78,
+            "freshness": 0.56,
+            "independence": 0.92,
+            "label": "较高",
+            "reasons": [
+              "来源类别：systematic_review",
+              "与scientific路线适配度 98%",
+              "本轮未发现明显同源复制",
+              "取得可核对内容"
+            ],
+            "model": "rules-v1"
+          },
+          "relationExplanation": "RCT测试EPA+DHA联合补充对情绪和认知功能的影响，发现无效；但干预为联合，不能完全分离DHA效应，故为间接支持。",
+          "evidenceRole": "direct",
+          "directness": 0.8,
+          "routeFit": 0.98,
+          "rankerExplanation": "RCT测试EPA+DHA联合补充对情绪和认知功能的影响，发现无效；但干预为联合，不能完全分离DHA效应，故为间接支持。"
+        },
+        {
+          "id": "claim-1-pm-21864417",
+          "title": "No effect of 12 weeks' supplementation with 1 g DHA-rich or EPA-rich fish oil on cognitive function or mood in healthy young adults aged 18-35 years.",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/21864417/",
+          "domain": "pubmed.ncbi.nlm.nih.gov",
+          "publishedAt": "2012-04-25",
+          "accessedAt": "2026-09-04T00:41:52.349Z",
+          "quote": "The n-3 PUFA are a unique class of fatty acids that cannot be manufactured by the body, and must be acquired via dietary sources. In the UK, as well as in other Western nations, these 'essential' fatty acids are consumed in quantities that fall below government guidelines. The present study explored the effects of 12 weeks' dietary supplementation with 1 g/d of two types of fish oil (FO; DHA-rich and EPA-rich) in 159 healthy young adults aged 18-35 years. An assessment of performance on a battery of computerised cognitive tasks and mood measures took place before and following the 12-week treatment regimen. Venous blood samples were also supplied by participants at both time points which were later analysed for serum fatty acid concentrations. Despite good adherence to the study protocol - as reflected in increased concentrations of n-3 serum fatty acids - compared with placebo, the observed effects of both active treatments were minimal. The only finding of note revealed that supplementation with EPA-rich FO may reduce subjective mental fatigue at times of high cognitive demand, a…",
+          "quoteType": "abstract",
+          "relation": "supporting_context",
+          "relevance": 1,
+          "sourceKind": "随机对照试验（PubMed）",
+          "sourceCategory": "academic_paper",
+          "provider": "pubmed",
+          "doi": "10.1017/s000711451100403x",
+          "quality": {
+            "score": 87,
+            "label": "较高",
+            "reasons": [
+              "由 PubMed 生物医学文献索引发现",
+              "文献类型标识为随机对照试验",
+              "已取得摘要；方法、偏倚和结果仍应复核全文"
+            ]
+          },
+          "promptInjectionIgnored": false,
+          "searchQuery": "docosahexaenoic acid supplementation healthy adults cognitive function randomized controlled trial null result",
+          "searchRound": 2,
+          "provenanceGroup": "prov-24b71bca08",
+          "trust": {
+            "overall": 0.8309000000000002,
+            "sourcePrior": 0.75,
+            "routeFit": 0.92,
+            "primaryness": 0.92,
+            "freshness": 0.56,
+            "independence": 0.92,
+            "label": "较高",
+            "reasons": [
+              "来源类别：academic_paper",
+              "与scientific路线适配度 92%",
+              "本轮未发现明显同源复制",
+              "取得可核对内容"
+            ],
+            "model": "rules-v1"
+          },
+          "relationExplanation": "RCT显示DHA-rich鱼油对健康年轻人认知功能无效，但干预为鱼油（含DHA和EPA），不能完全分离DHA，故为间接支持。",
+          "evidenceRole": "direct",
+          "directness": 0.8,
+          "routeFit": 0.92,
+          "rankerExplanation": "RCT显示DHA-rich鱼油对健康年轻人认知功能无效，但干预为鱼油（含DHA和EPA），不能完全分离DHA，故为间接支持。"
+        },
+        {
+          "id": "claim-1-pm-40044083",
+          "title": "Supplementation of medium-chain triglycerides combined with docosahexaenoic acid improves cognitive function in Chinese older adults with mild cognitive impairment: A randomized double-blind, placebo-controlled trial.",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/40044083/",
+          "domain": "pubmed.ncbi.nlm.nih.gov",
+          "publishedAt": "2025-06-01",
+          "accessedAt": "2026-09-04T00:41:27.872Z",
+          "quote": "BACKGROUND: Medium-chain triglycerides (MCT) and docosahexaenoic acid (DHA) could affect cognitive function, but their combination effects remain unclear. This randomized, double-blind, placebo-controlled trial aimed to evaluate effects of MCT and DHA supplementation, alone or in combination, on mild cognitive impairment (MCI) patients. METHODS: A total of 280 MCI participants were randomly assigned to the placebo group, MCT group (14 g/d octanoic acid+10 g/d capric acid), DHA group (800 mg/d) and MCT + DHA (14 g/d octanoic acid, 10 g/d capric acid and 800 mg/d DHA) group, 70 individuals per group for 12 months. Cognitive function was assessed at baseline, 6 months and 12 months; blood indicators were analyzed at baseline and 12 months. This study is registered with Chinese Clinical Trial Registry (ChiCTR2200059641). RESULTS: After 12 months intervention, compared with the placebo group, MCT group, DHA group and MCT + DHA group had statistically significant improvements in full scale IQ (β: 0.107, 95 % CI: 0.006, 0.208; β: 0.135, 95 % CI: 0.034, 0.235; β: 0.136, 95 % CI: 0.035, 0.2…",
+          "quoteType": "abstract",
+          "relation": "counter_signal",
+          "relevance": 1,
+          "sourceKind": "随机对照试验（PubMed）",
+          "sourceCategory": "academic_paper",
+          "provider": "pubmed",
+          "doi": "10.1016/j.jad.2025.03.008",
+          "quality": {
+            "score": 87,
+            "label": "较高",
+            "reasons": [
+              "由 PubMed 生物医学文献索引发现",
+              "文献类型标识为随机对照试验",
+              "已取得摘要；方法、偏倚和结果仍应复核全文"
+            ]
+          },
+          "promptInjectionIgnored": false,
+          "searchQuery": "DHA supplementation cognitive function adults randomized controlled trial",
+          "searchRound": 1,
+          "provenanceGroup": "prov-5b10f79b1f",
+          "trust": {
+            "overall": 0.8717000000000001,
+            "sourcePrior": 0.75,
+            "routeFit": 0.92,
+            "primaryness": 0.92,
+            "freshness": 0.9,
+            "independence": 0.92,
+            "label": "较高",
+            "reasons": [
+              "来源类别：academic_paper",
+              "与scientific路线适配度 92%",
+              "本轮未发现明显同源复制",
+              "取得可核对内容"
+            ],
+            "model": "rules-v1"
+          },
+          "relationExplanation": "RCT显示DHA单独补充（800mg/d）在MCI老年人中改善认知功能，直接反驳命题，但人群为MCI患者。",
+          "evidenceRole": "indirect",
+          "directness": 0.45,
+          "routeFit": 0.92,
+          "rankerExplanation": "RCT显示DHA单独补充（800mg/d）在MCI老年人中改善认知功能，直接反驳命题。 成分归因护栏已将直接性限制为 45%。"
+        },
+        {
+          "id": "claim-1-pm-35815739",
+          "title": "The effect of omega-3 fatty acid supplementation on weight loss and cognitive function in overweight or obese individuals on weight-loss diet.",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/35815739/",
+          "domain": "pubmed.ncbi.nlm.nih.gov",
+          "publishedAt": "2022-08-25",
+          "accessedAt": "2026-09-04T00:41:27.872Z",
+          "quote": "Objective: omega-3 polyunsaturated fatty acids (PUFAs) are important nutrients that play role in obesity, body lipids, inflammation, and neural function. There is controversy in studies on the effect of omega-3 PUFA supplementation on weight loss and cognitive function. The aim of this study was to investigate the effect of omega-3 PUFA supplementation on weight loss and cognitive function in obese or overweight adults on a weight loss diet. Methods: 40 adult volunteers aged 30-60 years, with body mass index (BMI) between 27.0 and 35.0 kg/m2, were randomly allocated into two groups. All subjects were involved in a weight loss diet program. The subjects in the omega-3 group (n = 20) also received daily supplementation with 1020 mg of omega-3 PUFAs (580 mg eicosapentaenoic acid (EPA), 390 mg docosahexaenoic acid (DHA), 50 mg other omega-3 PUFAs) for 12 weeks. Anthropometric measurements and body composition analysis were obtained at onset and at weeks 4, 8, and 12 of the study. The Montreal Cognitive Assessment (MoCA) test was used for evaluating cognitive functions at diet onset and…",
+          "quoteType": "abstract",
+          "relation": "related",
+          "relevance": 1,
+          "sourceKind": "随机对照试验（PubMed）",
+          "sourceCategory": "academic_paper",
+          "provider": "pubmed",
+          "doi": "10.20960/nh.03992",
+          "quality": {
+            "score": 87,
+            "label": "较高",
+            "reasons": [
+              "由 PubMed 生物医学文献索引发现",
+              "文献类型标识为随机对照试验",
+              "已取得摘要；方法、偏倚和结果仍应复核全文"
+            ]
+          },
+          "promptInjectionIgnored": false,
+          "searchQuery": "DHA supplementation cognitive function adults randomized controlled trial",
+          "searchRound": 1,
+          "provenanceGroup": "prov-2ea9d1a673",
+          "trust": {
+            "overall": 0.8717000000000001,
+            "sourcePrior": 0.75,
+            "routeFit": 0.92,
+            "primaryness": 0.92,
+            "freshness": 0.9,
+            "independence": 0.92,
+            "label": "较高",
+            "reasons": [
+              "来源类别：academic_paper",
+              "与scientific路线适配度 92%",
+              "本轮未发现明显同源复制",
+              "取得可核对内容"
+            ],
+            "model": "rules-v1"
+          },
+          "relationExplanation": "干预为omega-3（EPA+DHA）联合，且结果未明确认知改善，不能直接支持或反驳DHA单独效应，但提供背景信息。",
+          "evidenceRole": "indirect",
+          "directness": 0.4,
+          "routeFit": 0.92,
+          "rankerExplanation": "干预为omega-3（EPA+DHA）联合，且结果未明确认知改善，不能直接支持或反驳DHA单独效应，但可能提供背景。"
+        },
+        {
+          "id": "claim-1-pm-28626140",
+          "title": "Long-chain Polyunsaturated Fatty Acid Supplementation Improves Mood in Elderly Japanese Men.",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/28626140/",
+          "domain": "pubmed.ncbi.nlm.nih.gov",
+          "publishedAt": "2017-07-01",
+          "accessedAt": "2026-09-04T00:41:52.349Z",
+          "quote": "Although several studies have reported the effects of long-chain polyunsaturated fatty acid (LCPUFA) supplementation on the mood in healthy adults, the effects of LCPUFA on elderly individuals remain unclear. Thus, we hypothesized that LCPUFA supplementation improves mood in the elderly. To address this hypothesis, 115 elderly Japanese men aged 55-64 years were assigned and randomly allocated to the LCPUFA or placebo group. Participants received 4 weeks of supplementation with LCPUFA-containing oil (docosahexaenoic acid (DHA) 300 mg/day, eicosapentaenoic acid (EPA) 100 mg/day, arachidonic acid (ARA) 120 mg/day) or a placebo oil. Mood was assessed using the Profile of Mood States (POMS) before and after supplementation as the secondary outcome in a previously performed randomized controlled trial on cognitive function. A total of 113 participants completed the supplementation period. One hundred participants (LCPUFA, n = 51; placebo, n = 49) who were eligible for evaluation of mood were analyzed. Increases in vigor scores on POMS, reflecting a positive mood, were significantly large…",
+          "quoteType": "abstract",
+          "relation": "related",
+          "relevance": 1,
+          "sourceKind": "随机对照试验（PubMed）",
+          "sourceCategory": "academic_paper",
+          "provider": "pubmed",
+          "doi": "10.5650/jos.ess17035",
+          "quality": {
+            "score": 87,
+            "label": "较高",
+            "reasons": [
+              "由 PubMed 生物医学文献索引发现",
+              "文献类型标识为随机对照试验",
+              "已取得摘要；方法、偏倚和结果仍应复核全文"
+            ]
+          },
+          "promptInjectionIgnored": false,
+          "searchQuery": "docosahexaenoic acid supplementation healthy adults cognitive function randomized controlled trial null result",
+          "searchRound": 2,
+          "provenanceGroup": "prov-9df264af16",
+          "trust": {
+            "overall": 0.8537000000000001,
+            "sourcePrior": 0.75,
+            "routeFit": 0.92,
+            "primaryness": 0.92,
+            "freshness": 0.75,
+            "independence": 0.92,
+            "label": "较高",
+            "reasons": [
+              "来源类别：academic_paper",
+              "与scientific路线适配度 92%",
+              "本轮未发现明显同源复制",
+              "取得可核对内容"
+            ],
+            "model": "rules-v1"
+          },
+          "relationExplanation": "研究关注情绪（心境）而非认知或视觉功能，且干预为LCPUFA混合物，与命题无关。",
+          "evidenceRole": "irrelevant",
+          "directness": 0,
+          "routeFit": 0.92,
+          "rankerExplanation": "研究关注情绪（心境）而非认知或视觉功能，且干预为LCPUFA混合物，与命题无关。"
+        }
+      ],
+      "independentSourceCount": 7,
+      "searchPlan": [
+        "证据路线：scientific",
+        "来源优先级：随机对照试验",
+        "来源优先级：系统综述/Meta分析",
+        "来源优先级：权威机构循证指南",
+        "来源优先级：系统综述或荟萃分析",
+        "来源优先级：直接回答命题的同行评议研究",
+        "来源优先级：研究注册与原始数据",
+        "第 1 轮检索：“鱼油中的DHA成分对成年人的功能性结局（如认知功能、视觉功能）无效”",
+        "第 1 轮检索：“DHA supplementation cognitive function adults randomized controlled trial”",
+        "第 2 轮反证检索：“docosahexaenoic acid supplementation healthy adults cognitive function randomized controlled trial null result”",
+        "第 2 轮反证检索：“DHA supplementation visual function adults randomized controlled trial no effect”"
+      ],
+      "searchRounds": 2,
+      "extractionMethod": "llm",
+      "judgedByLlm": true,
+      "contextChecks": [
+        {
+          "type": "subject_confusion",
+          "status": "unknown",
+          "explanation": "部分证据使用EPA+DHA联合干预，无法确认DHA单独效应；但未发现来源材料本身存在时间错置或图文不一致。",
+          "evidenceIds": [
+            "claim-1-oa-fdebc6250b",
+            "claim-1-pm-21864417",
+            "claim-1-pm-35815739"
+          ],
+          "label": "主体混淆"
+        }
+      ],
+      "counterEvidenceIds": [
+        "claim-1-oa-6c0e889608",
+        "claim-1-oa-c19725bc79",
+        "claim-1-pm-40044083"
+      ],
+      "followUpQueries": [
+        "DHA单独补充对健康成年人认知功能的随机对照试验",
+        "DHA补充对成年人视觉功能影响的随机对照试验",
+        "DHA单独补充与EPA+DHA联合补充的效果比较"
+      ],
+      "warnings": [],
+      "retrievalNotes": [
+        "部分检索未完成，但已保留其他成功来源：检索词“鱼油中的DHA成分对成年人的功能性结局（如认知功能、视觉功能）无效”未完成：网络连接失败或超时"
+      ],
+      "unknowns": [
+        "本轮材料未提供健康成年人（无认知障碍）的长期DHA单独补充RCT数据。",
+        "本轮材料未提供视觉功能结局的直接证据。",
+        "本轮材料未说明DHA单独补充与EPA+DHA联合补充的效果差异。"
+      ],
+      "argumentMap": {
+        "issue": "DHA对成年人功能性结局是否有效",
+        "issueType": "descriptive",
+        "conclusion": "无效",
+        "argumentType": "causal",
+        "statedPremises": [],
+        "implicitAssumptions": [
+          "DHA补充剂可提高体内DHA水平",
+          "功能性结局是衡量有效性的相关指标"
+        ],
+        "ambiguousTerms": [],
+        "qualifiers": [
+          "成年人"
+        ]
+      },
+      "reasoningScorecard": {
+        "premiseReliability": {
+          "score": 0.12,
+          "status": "unknown",
+          "explanation": "前提为DHA补充对功能性结局无效，但证据中既有支持无效的研究，也有反驳无效的研究，且部分研究干预为联合，前提可靠性中等。 已按实际取得的原文与来源质量下调。"
+        },
+        "evidenceRelevance": {
+          "score": 0.12,
+          "status": "unknown",
+          "explanation": "证据直接评估DHA对认知功能的影响，但部分研究使用EPA+DHA联合干预，且人群包括MCI患者和健康成年人，与命题的“成年人”范围不完全匹配。 已按实际文本相关度下调。"
+        },
+        "inferenceStrength": {
+          "score": 0.5,
+          "status": "mixed",
+          "explanation": "即使前提为真，从特定人群（如MCI患者）的结果外推至所有成年人存在逻辑跳跃；且联合干预不能单独归因于DHA。"
+        },
+        "evidenceCoverage": {
+          "score": 0.08,
+          "status": "unknown",
+          "explanation": "证据覆盖了认知功能，但视觉功能结局缺乏直接证据，且健康成年人长期数据不足。 已按可读证据数量下调。"
+        },
+        "sourceIndependence": {
+          "score": 0.08,
+          "status": "unknown",
+          "explanation": "证据来自不同研究团队和期刊，未发现明显同源复制，来源独立性较高。 已按独立域名组数量下调。"
+        }
+      },
+      "fallacyFindings": [
+        {
+          "code": "hasty_generalization",
+          "label": "以偏概全",
+          "confidence": 0.6,
+          "severity": "medium",
+          "scope": "鱼油中的DHA成分对成年人的功能性结局（如认知功能、视觉功能）无效",
+          "explanation": "命题将基于特定人群（如MCI患者或健康年轻人）的研究结果推广到所有成年人，可能忽略人群异质性。",
+          "impact": "可能导致对DHA效果的过度概括，忽略特定亚群的潜在益处。",
+          "repair": "应限定人群范围，或提供覆盖不同年龄和认知状态成年人的系统综述证据。",
+          "evidenceIds": [
+            "claim-1-oa-6c0e889608",
+            "claim-1-oa-c19725bc79",
+            "claim-1-pm-40044083"
+          ]
+        }
+      ],
+      "alternativeExplanations": [
+        {
+          "text": "DHA效果可能仅存在于特定亚群（如MCI患者）或与EPA等其他脂肪酸联用才有效。",
+          "status": "plausible",
+          "assessment": "多项RCT显示DHA在MCI或ARCD老年人中改善认知，但在健康成年人中无效，支持该解释。",
+          "evidenceIds": [
+            "claim-1-oa-6c0e889608",
+            "claim-1-oa-c19725bc79",
+            "claim-1-pm-40044083",
+            "claim-1-pm-21864417"
+          ]
+        },
+        {
+          "text": "认知功能改善可能归因于安慰剂效应或测试练习效应。",
+          "status": "unresolved",
+          "assessment": "部分RCT采用双盲安慰剂对照，但未明确报告盲法细节，无法排除该解释。",
+          "evidenceIds": []
+        }
+      ],
+      "criticalQuestions": [
+        {
+          "question": "DHA单独补充对健康成年人认知功能是否无效？",
+          "status": "partial",
+          "answer": "一项系统综述显示无效，但缺乏专门针对健康成年人的DHA单独补充RCT。",
+          "evidenceIds": [
+            "claim-1-oa-6e3444756c"
+          ]
+        },
+        {
+          "question": "DHA补充对成年人视觉功能是否无效？",
+          "status": "open",
+          "answer": "本轮材料未提供视觉功能结局的直接证据。",
+          "evidenceIds": []
+        },
+        {
+          "question": "DHA效果是否因人群（健康成年人 vs. MCI患者）而异？",
+          "status": "partial",
+          "answer": "证据显示DHA在MCI患者中可能有益，但在健康成年人中无效，但缺乏直接比较研究。",
+          "evidenceIds": [
+            "claim-1-oa-6c0e889608",
+            "claim-1-pm-21864417"
+          ]
+        }
+      ],
+      "whatWouldChangeMind": [
+        "一项大规模、长期、随机双盲安慰剂对照试验，专门评估DHA单独补充对健康成年人认知和视觉功能的影响。",
+        "一项系统综述和荟萃分析，纳入所有相关RCT，并分别分析DHA单独补充和EPA+DHA联合补充的效果。",
+        "直接比较DHA在健康成年人和MCI患者中效果的个体参与者数据荟萃分析。"
+      ],
+      "strongestCounterargument": "现有证据多来自轻度认知障碍或老年人群，且部分试验显示DHA对健康成年人认知或视觉无显著改善，甚至可能无效；结论外推至所有成年人缺乏充分支持。",
+      "routePlan": {
+        "primaryRoute": "scientific",
+        "routes": [
+          "scientific"
+        ],
+        "rationale": "效果问题需基于随机对照试验和系统综述的科学证据",
+        "sourcePriorities": [
+          "随机对照试验",
+          "系统综述/Meta分析",
+          "权威机构循证指南",
+          "系统综述或荟萃分析",
+          "直接回答命题的同行评议研究",
+          "研究注册与原始数据"
+        ],
+        "freshnessRequired": false
+      },
+      "specialistReview": {
+        "criticType": "scientific",
+        "overallAssessment": "证据整体质量中等偏上，但存在不一致性。多数研究为随机对照试验或系统综述，设计较严谨，但部分研究样本量小、人群异质性大，且结果相互矛盾。",
+        "designQuality": {
+          "score": 0.7,
+          "status": "mixed",
+          "explanation": "多数证据为随机对照试验或系统综述，设计合理，但部分研究样本量较小（如40人），且人群差异大（健康成人、抑郁患者、MCI患者等），影响可比性。"
+        },
+        "biasControl": {
+          "score": 0.7,
+          "status": "mixed",
+          "explanation": "多数研究采用双盲、安慰剂对照，但部分研究未明确报告分配隐藏或盲法细节，且存在失访偏倚可能。"
+        },
+        "directness": {
+          "score": 0.6,
+          "status": "mixed",
+          "explanation": "证据直接评估DHA对认知或视觉功能的影响，但部分研究使用复合结局或次要结局，且人群并非均为健康成年人，与命题的“成年人”范围不完全匹配。"
+        },
+        "precision": {
+          "score": 0.6,
+          "status": "mixed",
+          "explanation": "部分研究报告了置信区间，但多数研究样本量有限，效应估计精度不足，且未提供统一效应量。"
+        },
+        "sourceIntegrity": {
+          "score": 0.8,
+          "status": "strong",
+          "explanation": "来源均为同行评议期刊或系统综述，无撤稿或注册异常线索，但部分研究未提及注册信息。"
+        },
+        "limitations": [
+          "研究间结果不一致，部分显示有益，部分显示无效。",
+          "人群异质性大，包括健康成人、抑郁患者、MCI患者等，难以统一概括。",
+          "部分研究样本量小，统计效能不足。",
+          "视觉功能结局证据缺乏，主要集中于认知功能。"
+        ],
+        "evidenceIds": [
+          "claim-1-oa-6e3444756c",
+          "claim-1-oa-fdebc6250b",
+          "claim-1-pm-40044083",
+          "claim-1-pm-35815739",
+          "claim-1-oa-6c0e889608",
+          "claim-1-pm-28626140",
+          "claim-1-oa-c19725bc79",
+          "claim-1-pm-21864417"
+        ],
+        "reviewedBy": "llm"
+      }
+    },
+    {
+      "id": "claim-2",
+      "text": "鱼油中的DHA成分对成年人的硬临床结局（如心血管事件、死亡）无效",
+      "query": "鱼油中的DHA成分对成年人的硬临床结局（如心血管事件、死亡）无效",
+      "entities": [
+        "DHA",
+        "成年人"
+      ],
+      "verdict": "insufficient",
+      "verdictLabel": "证据不足",
+      "confidence": 0.23479999999999998,
+      "conclusion": "现有证据不足以支持“DHA对成年人硬临床结局无效”的主张，因为缺乏DHA单独效应的直接证据。",
+      "reasoningSummary": "所有证据均使用EPA+DHA联合干预或未单独报告DHA效应，无法将结果归因于DHA。系统综述和RCT显示omega-3脂肪酸对心血管事件可能无显著获益，但干预为组合，且部分研究人群特殊（如血液透析患者），不能直接支持DHA无效。",
+      "evidence": [
+        {
+          "id": "claim-2-pm-38869144",
+          "title": "Effects of omega-3 fatty acids on coronary revascularization and cardiovascular events: a meta-analysis.",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/38869144/",
+          "domain": "pubmed.ncbi.nlm.nih.gov",
+          "publishedAt": "2024-11-11",
+          "accessedAt": "2026-09-04T00:41:27.876Z",
+          "quote": "AIMS: Benefits of pharmacologic omega-3 fatty acid administration in cardiovascular prevention are controversial. Particularly, effects on coronary revascularization are unclear; also debated are specific benefits of eicosapentaenoic acid (EPA). We investigated incident coronary revascularizations, myocardial infarction (MI), stroke, heart failure (HF), unstable angina, and cardiovascular death, in subjects randomized to receive EPA or EPA + docosahexaenoic acid (EPA + DHA) vs. control. METHODS AND RESULTS: Meta-analysis of randomized controlled trials (RCTs) was conducted after MEDLINE, Embase, Scopus, Web of Science, and Cochrane Library search. Preferred Reporting Items for Systematic Reviews and Meta-analysis guidelines were followed for abstracting data and assessing data quality and validity. Data were pooled using a random effects model. Eighteen RCTs with 134 144 participants (primary and secondary cardiovascular prevention) receiving DHA + EPA (n = 52 498), EPA alone (n = 14 640), or control/placebo (n = 67 006) were included. Follow-up ranged from 4.5 months to 7.4 years.…",
+          "quoteType": "abstract",
+          "relation": "related",
+          "relevance": 1,
+          "sourceKind": "系统综述（PubMed）",
+          "sourceCategory": "systematic_review",
+          "provider": "pubmed",
+          "doi": "10.1093/eurjpc/zwae184",
+          "quality": {
+            "score": 90,
+            "label": "较高",
+            "reasons": [
+              "由 PubMed 生物医学文献索引发现",
+              "文献类型标识为系统综述或 Meta 分析",
+              "已取得摘要；方法、偏倚和结果仍应复核全文"
+            ]
+          },
+          "promptInjectionIgnored": false,
+          "searchQuery": "DHA supplementation cardiovascular events adults randomized trial",
+          "searchRound": 1,
+          "provenanceGroup": "prov-f0945e0f4b",
+          "trust": {
+            "overall": 0.8956000000000001,
+            "sourcePrior": 0.88,
+            "routeFit": 0.98,
+            "primaryness": 0.78,
+            "freshness": 0.9,
+            "independence": 0.92,
+            "label": "较高",
+            "reasons": [
+              "来源类别：systematic_review",
+              "与scientific路线适配度 98%",
+              "本轮未发现明显同源复制",
+              "取得可核对内容"
+            ],
+            "model": "rules-v1"
+          },
+          "relationExplanation": "该meta分析评估EPA或EPA+DHA对心血管事件的影响，但未分离DHA单独效应，且结论可能显示无显著获益，但干预为组合，不能直接支持DHA无效。",
+          "evidenceRole": "indirect",
+          "directness": 0.3,
+          "routeFit": 0.98,
+          "rankerExplanation": "该meta分析评估EPA或EPA+DHA对心血管事件的影响，但未分离DHA单独效应，且结论可能显示无显著获益，但干预为组合，不能直接支持DHA无效。"
+        },
+        {
+          "id": "claim-2-pm-32114706",
+          "title": "Omega-3 fatty acids for the primary and secondary prevention of cardiovascular disease.",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/32114706/",
+          "domain": "pubmed.ncbi.nlm.nih.gov",
+          "publishedAt": "2020-02-29",
+          "accessedAt": "2026-09-04T00:41:27.876Z",
+          "quote": "BACKGROUND: Omega-3 polyunsaturated fatty acids from oily fish (long-chain omega-3 (LCn3)), including eicosapentaenoic acid (EPA) and docosahexaenoic acid (DHA)), as well as from plants (alpha-linolenic acid (ALA)) may benefit cardiovascular health. Guidelines recommend increasing omega-3-rich foods, and sometimes supplementation, but recent trials have not confirmed this. OBJECTIVES: To assess the effects of increased intake of fish- and plant-based omega-3 fats for all-cause mortality, cardiovascular events, adiposity and lipids. SEARCH METHODS: We searched CENTRAL, MEDLINE and Embase to February 2019, plus ClinicalTrials.gov and World Health Organization International Clinical Trials Registry to August 2019, with no language restrictions. We handsearched systematic review references and bibliographies and contacted trial authors. SELECTION CRITERIA: We included randomised controlled trials (RCTs) that lasted at least 12 months and compared supplementation or advice to increase LCn3 or ALA intake, or both, versus usual or lower intake. DATA COLLECTION AND ANALYSIS: Two review aut…",
+          "quoteType": "abstract",
+          "relation": "related",
+          "relevance": 1,
+          "sourceKind": "系统综述（PubMed）",
+          "sourceCategory": "systematic_review",
+          "provider": "pubmed",
+          "doi": "10.1002/14651858.cd003177.pub5",
+          "quality": {
+            "score": 90,
+            "label": "较高",
+            "reasons": [
+              "由 PubMed 生物医学文献索引发现",
+              "文献类型标识为系统综述或 Meta 分析",
+              "已取得摘要；方法、偏倚和结果仍应复核全文"
+            ]
+          },
+          "promptInjectionIgnored": false,
+          "searchQuery": "DHA supplementation cardiovascular events adults randomized trial",
+          "searchRound": 1,
+          "provenanceGroup": "prov-f25f23aa31",
+          "trust": {
+            "overall": 0.8776,
+            "sourcePrior": 0.88,
+            "routeFit": 0.98,
+            "primaryness": 0.78,
+            "freshness": 0.75,
+            "independence": 0.92,
+            "label": "较高",
+            "reasons": [
+              "来源类别：systematic_review",
+              "与scientific路线适配度 98%",
+              "本轮未发现明显同源复制",
+              "取得可核对内容"
+            ],
+            "model": "rules-v1"
+          },
+          "relationExplanation": "该Cochrane综述评估LCn3（含DHA）对心血管事件的影响，但未分离DHA单独效应，且结论可能显示无显著获益，但干预为组合，不能直接支持DHA无效。",
+          "evidenceRole": "indirect",
+          "directness": 0.3,
+          "routeFit": 0.98,
+          "rankerExplanation": "该Cochrane综述评估LCn3（含DHA）对心血管事件的影响，但未分离DHA单独效应，且结论可能显示无显著获益，但干预为组合，不能直接支持DHA无效。"
+        },
+        {
+          "id": "claim-2-pm-41201837",
+          "title": "Fish-Oil Supplementation and Cardiovascular Events in Patients Receiving Hemodialysis.",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/41201837/",
+          "domain": "pubmed.ncbi.nlm.nih.gov",
+          "publishedAt": "2026-01-08",
+          "accessedAt": "2026-09-04T00:41:27.876Z",
+          "quote": "BACKGROUND: Cardiovascular disease is the leading cause of death in patients receiving hemodialysis, yet effective preventive therapies remain limited. Supplementation with n-3 polyunsaturated fatty acids, especially eicosapentaenoic acid (EPA) and docosahexaenoic acid (DHA), may have cardiovascular benefits in the general population, but efficacy among patients receiving hemodialysis is uncertain. METHODS: In a double-blind, randomized, placebo-controlled trial conducted at 26 sites in Canada and Australia, we assigned adult patients receiving maintenance hemodialysis to daily supplementation with fish oil (4 g of n-3 polyunsaturated fatty acids [1.6 g of EPA and 0.8 g of DHA]) or corn-oil placebo. The primary end point was a composite of all serious cardiovascular events including sudden and nonsudden cardiac death, fatal and nonfatal myocardial infarction, peripheral vascular disease leading to amputation, and fatal and nonfatal stroke. Secondary end points included extension of the primary end point to include noncardiac causes of death, the individual components of the primary…",
+          "quoteType": "abstract",
+          "relation": "related",
+          "relevance": 1,
+          "sourceKind": "随机对照试验（PubMed）",
+          "sourceCategory": "academic_paper",
+          "provider": "pubmed",
+          "doi": "10.1056/nejmoa2513032",
+          "quality": {
+            "score": 87,
+            "label": "较高",
+            "reasons": [
+              "由 PubMed 生物医学文献索引发现",
+              "文献类型标识为随机对照试验",
+              "已取得摘要；方法、偏倚和结果仍应复核全文"
+            ]
+          },
+          "promptInjectionIgnored": false,
+          "searchQuery": "DHA supplementation cardiovascular events adults randomized trial",
+          "searchRound": 1,
+          "provenanceGroup": "prov-c99624d173",
+          "trust": {
+            "overall": 0.8717000000000001,
+            "sourcePrior": 0.75,
+            "routeFit": 0.92,
+            "primaryness": 0.92,
+            "freshness": 0.9,
+            "independence": 0.92,
+            "label": "较高",
+            "reasons": [
+              "来源类别：academic_paper",
+              "与scientific路线适配度 92%",
+              "本轮未发现明显同源复制",
+              "取得可核对内容"
+            ],
+            "model": "rules-v1"
+          },
+          "relationExplanation": "该RCT使用鱼油（EPA+DHA）在血液透析患者中未显示心血管获益，但干预为组合，且人群特殊，不能直接支持DHA无效。",
+          "evidenceRole": "indirect",
+          "directness": 0.3,
+          "routeFit": 0.92,
+          "rankerExplanation": "该RCT使用鱼油（EPA+DHA）在血液透析患者中未显示心血管获益，但干预为组合，且人群特殊，不能直接支持DHA无效。"
+        },
+        {
+          "id": "claim-2-oa-3ff4d46cfe",
+          "title": "n–3 Fatty Acids and Cardiovascular Events after Myocardial Infarction",
+          "url": "https://doi.org/10.1056/nejmoa1003603",
+          "domain": "doi.org",
+          "publishedAt": "2010-10-07",
+          "accessedAt": "2026-09-04T00:41:27.877Z",
+          "quote": "BACKGROUND: Results from prospective cohort studies and randomized, controlled trials have provided evidence of a protective effect of n-3 fatty acids against cardiovascular diseases. We examined the effect of the marine n-3 fatty acids eicosapentaenoic acid (EPA) and docosahexaenoic acid (DHA) and of the plant-derived alpha-linolenic acid (ALA) on the rate of cardiovascular events among patients who have had a myocardial infarction. METHODS: In a multicenter, double-blind, placebo-controlled trial, we randomly assigned 4837 patients, 60 through 80 years of age (78% men), who had had a myocardial infarction and were receiving state-of-the-art antihypertensive, antithrombotic, and lipid-mod…",
+          "quoteType": "abstract",
+          "relation": "related",
+          "relevance": 1,
+          "sourceKind": "学术研究（OpenAlex 索引）",
+          "sourceCategory": "academic_paper",
+          "provider": "openalex",
+          "doi": "10.1056/nejmoa1003603",
+          "quality": {
+            "score": 76,
+            "label": "较高",
+            "reasons": [
+              "由 OpenAlex 学术索引发现",
+              "单篇研究不能自动代表领域共识",
+              "已取得摘要，方法和结果仍需全文复核"
+            ]
+          },
+          "promptInjectionIgnored": false,
+          "searchQuery": "DHA supplementation cardiovascular events adults randomized trial",
+          "searchRound": 1,
+          "provenanceGroup": "prov-71c7769ba6",
+          "trust": {
+            "overall": 0.8309000000000002,
+            "sourcePrior": 0.75,
+            "routeFit": 0.92,
+            "primaryness": 0.92,
+            "freshness": 0.56,
+            "independence": 0.92,
+            "label": "较高",
+            "reasons": [
+              "来源类别：academic_paper",
+              "与scientific路线适配度 92%",
+              "本轮未发现明显同源复制",
+              "取得可核对内容"
+            ],
+            "model": "rules-v1"
+          },
+          "relationExplanation": "该RCT使用EPA+DHA组合，未分离DHA单独效应，且结果可能显示无显著获益，但干预为组合，不能直接支持DHA无效。",
+          "evidenceRole": "indirect",
+          "directness": 0.3,
+          "routeFit": 0.92,
+          "rankerExplanation": "该RCT使用EPA+DHA组合，未分离DHA单独效应，且结果可能显示无显著获益，但干预为组合，不能直接支持DHA无效。"
+        },
+        {
+          "id": "claim-2-oa-1f8df95196",
+          "title": "Omega-3 Fatty Acids EPA and DHA: Health Benefits Throughout Life",
+          "url": "https://doi.org/10.3945/an.111.000893",
+          "domain": "doi.org",
+          "publishedAt": "2012-01-01",
+          "accessedAt": "2026-09-04T00:41:27.877Z",
+          "quote": "收录于 Advances in Nutrition。文献类型：article。未取得摘要，不能仅凭标题支持结论。",
+          "quoteType": "metadata",
+          "relation": "related",
+          "relevance": 0.325,
+          "sourceKind": "学术研究（OpenAlex 索引）",
+          "sourceCategory": "academic_index",
+          "provider": "openalex",
+          "doi": "10.3945/an.111.000893",
+          "quality": {
+            "score": 60,
+            "label": "一般",
+            "reasons": [
+              "由 OpenAlex 学术索引发现",
+              "单篇研究不能自动代表领域共识",
+              "未取得摘要，标题不能作为直接证据"
+            ]
+          },
+          "promptInjectionIgnored": false,
+          "searchQuery": "DHA supplementation cardiovascular events adults randomized trial",
+          "searchRound": 1,
+          "provenanceGroup": "prov-cb9103415c",
+          "trust": {
+            "overall": 0.5026,
+            "sourcePrior": 0.58,
+            "routeFit": 0.64,
+            "primaryness": 0.5,
+            "freshness": 0.56,
+            "independence": 0.92,
+            "label": "一般",
+            "reasons": [
+              "来源类别：academic_index",
+              "与scientific路线适配度 64%",
+              "本轮未发现明显同源复制",
+              "只有书目信息，未取得摘要或正文"
+            ],
+            "model": "rules-v1"
+          },
+          "evidenceRole": "background",
+          "directness": 0.1,
+          "routeFit": 0.64,
+          "rankerExplanation": "确定性预筛未将该项送入独立核验，因此只作为背景线索。"
+        }
+      ],
+      "independentSourceCount": 4,
+      "searchPlan": [
+        "证据路线：scientific",
+        "来源优先级：大规模随机对照试验",
+        "来源优先级：系统综述/Meta分析",
+        "来源优先级：临床指南",
+        "来源优先级：系统综述或荟萃分析",
+        "来源优先级：直接回答命题的同行评议研究",
+        "来源优先级：研究注册与原始数据",
+        "第 1 轮检索：“鱼油中的DHA成分对成年人的硬临床结局（如心血管事件、死亡）无效”",
+        "第 1 轮检索：“DHA supplementation cardiovascular events adults randomized trial”"
+      ],
+      "searchRounds": 1,
+      "extractionMethod": "llm",
+      "judgedByLlm": true,
+      "contextChecks": [
+        {
+          "type": "subject_confusion",
+          "status": "unknown",
+          "explanation": "所有证据均使用EPA+DHA联合干预，无法确认DHA单独效应；但未发现来源材料本身存在时间错置或图文不一致。",
+          "evidenceIds": [
+            "claim-2-pm-38869144",
+            "claim-2-pm-32114706",
+            "claim-2-pm-41201837",
+            "claim-2-oa-3ff4d46cfe"
+          ],
+          "label": "主体混淆"
+        }
+      ],
+      "counterEvidenceIds": [],
+      "followUpQueries": [
+        "DHA单独补充对成年人主要心血管事件影响的随机对照试验",
+        "DHA单独补充对成年人全因死亡率影响的随机对照试验",
+        "DHA单独补充与EPA+DHA联合补充对硬临床结局的效果比较"
+      ],
+      "warnings": [],
+      "retrievalNotes": [
+        "部分检索未完成，但已保留其他成功来源：检索词“鱼油中的DHA成分对成年人的硬临床结局（如心血管事件、死亡）无效”未完成：网络连接失败或超时"
+      ],
+      "unknowns": [
+        "本轮材料未提供DHA单独补充对成年人硬临床结局的随机对照试验。",
+        "本轮材料未说明DHA单独补充与EPA+DHA联合补充对硬临床结局的效果差异。"
+      ],
+      "argumentMap": {
+        "issue": "DHA对成年人硬临床结局是否有效",
+        "issueType": "descriptive",
+        "conclusion": "无效",
+        "argumentType": "causal",
+        "statedPremises": [],
+        "implicitAssumptions": [
+          "硬临床结局是衡量有效性的金标准"
+        ],
+        "ambiguousTerms": [],
+        "qualifiers": [
+          "成年人"
+        ]
+      },
+      "reasoningScorecard": {
+        "premiseReliability": {
+          "score": 0.12,
+          "status": "unknown",
+          "explanation": "前提为DHA对硬临床结局无效，但所有证据均未单独评估DHA效应，前提可靠性低。 已按实际取得的原文与来源质量下调。"
+        },
+        "evidenceRelevance": {
+          "score": 0.12,
+          "status": "unknown",
+          "explanation": "证据评估omega-3脂肪酸或EPA+DHA联合干预，未直接涉及DHA单独效应，与命题的相关性有限。 已按实际文本相关度下调。"
+        },
+        "inferenceStrength": {
+          "score": 0.3,
+          "status": "weak",
+          "explanation": "从联合干预的结果推断DHA单独效应存在逻辑跳跃，且部分研究人群特殊，不能推广至所有成年人。"
+        },
+        "evidenceCoverage": {
+          "score": 0.08,
+          "status": "unknown",
+          "explanation": "证据覆盖了心血管事件和死亡率，但缺乏DHA单独效应的直接证据，且未覆盖所有硬临床结局。 已按可读证据数量下调。"
+        },
+        "sourceIndependence": {
+          "score": 0.08,
+          "status": "unknown",
+          "explanation": "证据来自不同研究团队和期刊，未发现明显同源复制，来源独立性较高。 已按独立域名组数量下调。"
+        }
+      },
+      "fallacyFindings": [],
+      "alternativeExplanations": [
+        {
+          "text": "DHA单独补充可能对硬临床结局有效，但被联合干预中的EPA或其他成分掩盖。",
+          "status": "unresolved",
+          "assessment": "现有证据无法排除该解释，因为缺乏DHA单独效应的直接研究。",
+          "evidenceIds": []
+        },
+        {
+          "text": "DHA效果可能因人群（如血液透析患者 vs. 一般成年人）而异。",
+          "status": "plausible",
+          "assessment": "一项RCT在血液透析患者中未显示获益，但该人群特殊，不能推广至所有成年人。",
+          "evidenceIds": [
+            "claim-2-pm-41201837"
+          ]
+        }
+      ],
+      "criticalQuestions": [
+        {
+          "question": "DHA单独补充对成年人主要心血管事件是否无效？",
+          "status": "open",
+          "answer": "本轮材料未提供DHA单独补充的RCT证据。",
+          "evidenceIds": []
+        },
+        {
+          "question": "DHA单独补充对成年人全因死亡率是否无效？",
+          "status": "open",
+          "answer": "本轮材料未提供DHA单独补充的RCT证据。",
+          "evidenceIds": []
+        },
+        {
+          "question": "EPA+DHA联合干预的结果能否外推至DHA单独补充？",
+          "status": "open",
+          "answer": "现有证据未进行成分分离分析，无法回答。",
+          "evidenceIds": []
+        }
+      ],
+      "whatWouldChangeMind": [
+        "一项大规模、长期、随机双盲安慰剂对照试验，专门评估DHA单独补充对成年人主要心血管事件和全因死亡率的影响。",
+        "一项系统综述和荟萃分析，纳入所有相关RCT，并分别分析DHA单独补充和EPA+DHA联合补充的效果。",
+        "个体参与者数据荟萃分析，比较DHA单独补充与EPA+DHA联合补充对硬临床结局的效果差异。"
+      ],
+      "strongestCounterargument": "即使现象同时发生，也可能由共同原因、时间趋势或选择偏差造成。",
+      "routePlan": {
+        "primaryRoute": "scientific",
+        "routes": [
+          "scientific"
+        ],
+        "rationale": "硬临床结局需依赖大规模长期随机试验和Meta分析",
+        "sourcePriorities": [
+          "大规模随机对照试验",
+          "系统综述/Meta分析",
+          "临床指南",
+          "系统综述或荟萃分析",
+          "直接回答命题的同行评议研究",
+          "研究注册与原始数据"
+        ],
+        "freshnessRequired": false
+      },
+      "specialistReview": {
+        "criticType": "scientific",
+        "overallAssessment": "证据包括大规模随机试验和系统综述，但结果不一致，且部分研究未单独报告DHA效应，无法确认DHA对硬临床结局无效。",
+        "designQuality": {
+          "score": 0.82,
+          "status": "strong",
+          "explanation": "包含多项大规模随机对照试验和系统综述，样本量大，随访时间长，设计严谨。"
+        },
+        "biasControl": {
+          "score": 0.82,
+          "status": "strong",
+          "explanation": "多数研究采用随机双盲安慰剂对照，系统综述遵循PRISMA指南并评估偏倚风险。"
+        },
+        "directness": {
+          "score": 0.55,
+          "status": "mixed",
+          "explanation": "研究直接评估心血管事件和死亡率，但部分研究使用EPA+DHA联合干预，未单独分析DHA效应。"
+        },
+        "precision": {
+          "score": 0.82,
+          "status": "strong",
+          "explanation": "系统综述和大型试验报告了效应量和置信区间，精度较高。"
+        },
+        "sourceIntegrity": {
+          "score": 0.82,
+          "status": "strong",
+          "explanation": "来源均为高影响力期刊或Cochrane系统综述，无撤稿或注册异常线索。"
+        },
+        "limitations": [
+          "部分研究未单独报告DHA效应",
+          "不同研究间结果存在异质性"
+        ],
+        "evidenceIds": [
+          "claim-2-pm-38869144",
+          "claim-2-pm-32114706",
+          "claim-2-pm-41201837",
+          "claim-2-oa-3ff4d46cfe"
+        ],
+        "reviewedBy": "llm"
+      }
+    },
+    {
+      "id": "claim-3",
+      "text": "鱼油中的DHA成分对成年人的指标（如血脂、炎症标志物）无改善作用或存在安全性问题",
+      "query": "鱼油中的DHA成分对成年人的指标（如血脂、炎症标志物）无改善作用或存在安全性问题",
+      "entities": [
+        "DHA",
+        "成年人"
+      ],
+      "verdict": "insufficient",
+      "verdictLabel": "证据不足",
+      "confidence": 0.21839999999999998,
+      "conclusion": "现有证据不足以支持或反驳该主张，因为缺乏直接评估DHA对成年人血脂、炎症标志物及安全性的研究。",
+      "reasoningSummary": "仅有一项Cochrane系统综述（claim-3-pm-32114706）间接涉及LCn3对血脂的影响，但未单独分析DHA，也未报告炎症标志物或安全性结局；另一项RCT（claim-3-pm-40044083）主要结局为认知功能，未报告相关指标。证据直接性弱，无法形成有效支持。",
+      "evidence": [
+        {
+          "id": "claim-3-pm-32114706",
+          "title": "Omega-3 fatty acids for the primary and secondary prevention of cardiovascular disease.",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/32114706/",
+          "domain": "pubmed.ncbi.nlm.nih.gov",
+          "publishedAt": "2020-02-29",
+          "accessedAt": "2026-09-04T00:41:29.558Z",
+          "quote": "BACKGROUND: Omega-3 polyunsaturated fatty acids from oily fish (long-chain omega-3 (LCn3)), including eicosapentaenoic acid (EPA) and docosahexaenoic acid (DHA)), as well as from plants (alpha-linolenic acid (ALA)) may benefit cardiovascular health. Guidelines recommend increasing omega-3-rich foods, and sometimes supplementation, but recent trials have not confirmed this. OBJECTIVES: To assess the effects of increased intake of fish- and plant-based omega-3 fats for all-cause mortality, cardiovascular events, adiposity and lipids. SEARCH METHODS: We searched CENTRAL, MEDLINE and Embase to February 2019, plus ClinicalTrials.gov and World Health Organization International Clinical Trials Registry to August 2019, with no language restrictions. We handsearched systematic review references and bibliographies and contacted trial authors. SELECTION CRITERIA: We included randomised controlled trials (RCTs) that lasted at least 12 months and compared supplementation or advice to increase LCn3 or ALA intake, or both, versus usual or lower intake. DATA COLLECTION AND ANALYSIS: Two review aut…",
+          "quoteType": "abstract",
+          "relation": "related",
+          "relevance": 1,
+          "sourceKind": "系统综述（PubMed）",
+          "sourceCategory": "systematic_review",
+          "provider": "pubmed",
+          "doi": "10.1002/14651858.cd003177.pub5",
+          "quality": {
+            "score": 90,
+            "label": "较高",
+            "reasons": [
+              "由 PubMed 生物医学文献索引发现",
+              "文献类型标识为系统综述或 Meta 分析",
+              "已取得摘要；方法、偏倚和结果仍应复核全文"
+            ]
+          },
+          "promptInjectionIgnored": false,
+          "searchQuery": "DHA supplementation triglycerides adults randomized trial",
+          "searchRound": 1,
+          "provenanceGroup": "prov-f25f23aa31",
+          "trust": {
+            "overall": 0.8776,
+            "sourcePrior": 0.88,
+            "routeFit": 0.98,
+            "primaryness": 0.78,
+            "freshness": 0.75,
+            "independence": 0.92,
+            "label": "较高",
+            "reasons": [
+              "来源类别：systematic_review",
+              "与scientific路线适配度 98%",
+              "本轮未发现明显同源复制",
+              "取得可核对内容"
+            ],
+            "model": "rules-v1"
+          },
+          "relationExplanation": "该Cochrane综述评估LCn3（包括DHA）对血脂等心血管危险因素的影响，但未单独报告DHA对血脂、炎症标志物或安全性的效应，只能作为背景信息，不能直接支持或反驳主张。",
+          "evidenceRole": "indirect",
+          "directness": 0.3,
+          "routeFit": 0.98,
+          "rankerExplanation": "该Cochrane综述评估LCn3对血脂等指标的影响，但未分离DHA单独效应，且结论可能显示无改善或安全性问题，但干预为组合，不能直接支持DHA无改善或安全问题。"
+        },
+        {
+          "id": "claim-3-pm-40044083",
+          "title": "Supplementation of medium-chain triglycerides combined with docosahexaenoic acid improves cognitive function in Chinese older adults with mild cognitive impairment: A randomized double-blind, placebo-controlled trial.",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/40044083/",
+          "domain": "pubmed.ncbi.nlm.nih.gov",
+          "publishedAt": "2025-06-01",
+          "accessedAt": "2026-09-04T00:41:29.558Z",
+          "quote": "BACKGROUND: Medium-chain triglycerides (MCT) and docosahexaenoic acid (DHA) could affect cognitive function, but their combination effects remain unclear. This randomized, double-blind, placebo-controlled trial aimed to evaluate effects of MCT and DHA supplementation, alone or in combination, on mild cognitive impairment (MCI) patients. METHODS: A total of 280 MCI participants were randomly assigned to the placebo group, MCT group (14 g/d octanoic acid+10 g/d capric acid), DHA group (800 mg/d) and MCT + DHA (14 g/d octanoic acid, 10 g/d capric acid and 800 mg/d DHA) group, 70 individuals per group for 12 months. Cognitive function was assessed at baseline, 6 months and 12 months; blood indicators were analyzed at baseline and 12 months. This study is registered with Chinese Clinical Trial Registry (ChiCTR2200059641). RESULTS: After 12 months intervention, compared with the placebo group, MCT group, DHA group and MCT + DHA group had statistically significant improvements in full scale IQ (β: 0.107, 95 % CI: 0.006, 0.208; β: 0.135, 95 % CI: 0.034, 0.235; β: 0.136, 95 % CI: 0.035, 0.2…",
+          "quoteType": "abstract",
+          "relation": "related",
+          "relevance": 1,
+          "sourceKind": "随机对照试验（PubMed）",
+          "sourceCategory": "academic_paper",
+          "provider": "pubmed",
+          "doi": "10.1016/j.jad.2025.03.008",
+          "quality": {
+            "score": 87,
+            "label": "较高",
+            "reasons": [
+              "由 PubMed 生物医学文献索引发现",
+              "文献类型标识为随机对照试验",
+              "已取得摘要；方法、偏倚和结果仍应复核全文"
+            ]
+          },
+          "promptInjectionIgnored": false,
+          "searchQuery": "DHA supplementation triglycerides adults randomized trial",
+          "searchRound": 1,
+          "provenanceGroup": "prov-5b10f79b1f",
+          "trust": {
+            "overall": 0.8717000000000001,
+            "sourcePrior": 0.75,
+            "routeFit": 0.92,
+            "primaryness": 0.92,
+            "freshness": 0.9,
+            "independence": 0.92,
+            "label": "较高",
+            "reasons": [
+              "来源类别：academic_paper",
+              "与scientific路线适配度 92%",
+              "本轮未发现明显同源复制",
+              "取得可核对内容"
+            ],
+            "model": "rules-v1"
+          },
+          "relationExplanation": "该RCT主要结局为认知功能，未报告血脂、炎症标志物或安全性结局，与主张的核心指标不直接相关。",
+          "evidenceRole": "irrelevant",
+          "directness": 0,
+          "routeFit": 0.92,
+          "rankerExplanation": "该RCT主要关注认知功能，未报告血脂、炎症标志物或安全性结局，与命题无关。"
+        },
+        {
+          "id": "claim-3-oa-1f8df95196",
+          "title": "Omega-3 Fatty Acids EPA and DHA: Health Benefits Throughout Life",
+          "url": "https://doi.org/10.3945/an.111.000893",
+          "domain": "doi.org",
+          "publishedAt": "2012-01-01",
+          "accessedAt": "2026-09-04T00:41:28.901Z",
+          "quote": "收录于 Advances in Nutrition。文献类型：article。未取得摘要，不能仅凭标题支持结论。",
+          "quoteType": "metadata",
+          "relation": "related",
+          "relevance": 0.325,
+          "sourceKind": "学术研究（OpenAlex 索引）",
+          "sourceCategory": "academic_index",
+          "provider": "openalex",
+          "doi": "10.3945/an.111.000893",
+          "quality": {
+            "score": 60,
+            "label": "一般",
+            "reasons": [
+              "由 OpenAlex 学术索引发现",
+              "单篇研究不能自动代表领域共识",
+              "未取得摘要，标题不能作为直接证据"
+            ]
+          },
+          "promptInjectionIgnored": false,
+          "searchQuery": "DHA supplementation triglycerides adults randomized trial",
+          "searchRound": 1,
+          "provenanceGroup": "prov-cb9103415c",
+          "trust": {
+            "overall": 0.5026,
+            "sourcePrior": 0.58,
+            "routeFit": 0.64,
+            "primaryness": 0.5,
+            "freshness": 0.56,
+            "independence": 0.92,
+            "label": "一般",
+            "reasons": [
+              "来源类别：academic_index",
+              "与scientific路线适配度 64%",
+              "本轮未发现明显同源复制",
+              "只有书目信息，未取得摘要或正文"
+            ],
+            "model": "rules-v1"
+          },
+          "evidenceRole": "background",
+          "directness": 0.1,
+          "routeFit": 0.64,
+          "rankerExplanation": "确定性预筛未将该项送入独立核验，因此只作为背景线索。"
+        }
+      ],
+      "independentSourceCount": 1,
+      "searchPlan": [
+        "证据路线：scientific",
+        "来源优先级：随机对照试验",
+        "来源优先级：队列研究",
+        "来源优先级：系统综述/Meta分析",
+        "来源优先级：系统综述或荟萃分析",
+        "来源优先级：直接回答命题的同行评议研究",
+        "来源优先级：研究注册与原始数据",
+        "第 1 轮检索：“鱼油中的DHA成分对成年人的指标（如血脂、炎症标志物）无改善作用或存在安全性问题”",
+        "第 1 轮检索：“DHA supplementation triglycerides adults randomized trial”"
+      ],
+      "searchRounds": 1,
+      "extractionMethod": "llm",
+      "judgedByLlm": true,
+      "contextChecks": [],
+      "counterEvidenceIds": [],
+      "followUpQueries": [
+        "DHA单独补充对成年人血脂影响的随机对照试验",
+        "DHA补充对成年人炎症标志物影响的系统综述",
+        "DHA补充在成年人中的安全性结局（出血、房颤等）的荟萃分析"
+      ],
+      "warnings": [],
+      "retrievalNotes": [
+        "部分检索未完成，但已保留其他成功来源：检索词“鱼油中的DHA成分对成年人的指标（如血脂、炎症标志物）无改善作用或存在安全性问题”未完成：网络连接失败或超时"
+      ],
+      "unknowns": [
+        "本轮材料未提供DHA单独对成年人血脂（如甘油三酯）影响的直接证据。",
+        "本轮材料未提供DHA对成年人炎症标志物（如CRP）影响的直接证据。",
+        "本轮材料未提供DHA在成年人中安全性（如出血风险、房颤风险）的直接证据。"
+      ],
+      "argumentMap": {
+        "issue": "DHA对成年人指标和安全性是否有效/安全",
+        "issueType": "descriptive",
+        "conclusion": "无效或不安全",
+        "argumentType": "causal",
+        "statedPremises": [],
+        "implicitAssumptions": [
+          "指标变化可反映临床获益",
+          "安全性是有效性的前提"
+        ],
+        "ambiguousTerms": [],
+        "qualifiers": [
+          "成年人"
+        ]
+      },
+      "reasoningScorecard": {
+        "premiseReliability": {
+          "score": 0.12,
+          "status": "unknown",
+          "explanation": "主张的前提是DHA对指标无改善或存在安全性问题，但现有证据未直接测量这些结局，前提缺乏可靠证据支持。 已按实际取得的原文与来源质量下调。"
+        },
+        "evidenceRelevance": {
+          "score": 0.12,
+          "status": "unknown",
+          "explanation": "证据仅间接涉及LCn3对血脂的影响，未单独分析DHA，也未涉及炎症标志物和安全性，与主张的核心要素匹配度低。 已按实际文本相关度下调。"
+        },
+        "inferenceStrength": {
+          "score": 0.2,
+          "status": "weak",
+          "explanation": "即使LCn3对血脂无显著影响，也不能直接推断DHA单独无改善或存在安全性问题，因为DHA只是LCn3的一种成分，且未评估安全性。"
+        },
+        "evidenceCoverage": {
+          "score": 0.08,
+          "status": "unknown",
+          "explanation": "证据未覆盖主张的关键环节：DHA单独效应、炎症标志物、安全性结局，且缺乏反向证据。 已按可读证据数量下调。"
+        },
+        "sourceIndependence": {
+          "score": 0.08,
+          "status": "unknown",
+          "explanation": "两个证据来源不同（Cochrane综述和RCT），但均未直接针对主张，且RCT可能被综述纳入，独立性有限。 已按独立域名组数量下调。"
+        }
+      },
+      "fallacyFindings": [],
+      "alternativeExplanations": [
+        {
+          "text": "DHA可能对某些指标有改善作用，但现有研究未单独报告或未达到统计学显著性。",
+          "status": "unresolved",
+          "assessment": "由于缺乏直接证据，无法排除DHA有益的可能性。",
+          "evidenceIds": []
+        },
+        {
+          "text": "DHA的安全性风险可能仅在特定剂量或人群中显现，现有研究未充分评估。",
+          "status": "unresolved",
+          "assessment": "安全性结局未被报告，无法判断是否存在风险。",
+          "evidenceIds": []
+        }
+      ],
+      "criticalQuestions": [
+        {
+          "question": "是否有直接评估DHA单独补充对成年人血脂影响的随机对照试验？",
+          "status": "open",
+          "answer": "本轮材料未提供此类试验。",
+          "evidenceIds": []
+        },
+        {
+          "question": "DHA补充对成年人炎症标志物（如CRP）的影响是否有系统综述或荟萃分析？",
+          "status": "open",
+          "answer": "本轮材料未提供相关证据。",
+          "evidenceIds": []
+        },
+        {
+          "question": "DHA补充在成年人中的安全性结局（如出血、房颤）是否有可靠数据？",
+          "status": "open",
+          "answer": "本轮材料未报告安全性结局。",
+          "evidenceIds": []
+        }
+      ],
+      "whatWouldChangeMind": [
+        "一项直接比较DHA补充与安慰剂对成年人血脂影响的随机对照试验，报告效应量和置信区间。",
+        "一项评估DHA对成年人炎症标志物影响的系统综述或荟萃分析。",
+        "一项报告DHA补充安全性结局（如出血事件、房颤发生率）的长期随访研究。"
+      ],
+      "strongestCounterargument": "即使现象同时发生，也可能由共同原因、时间趋势或选择偏差造成。",
+      "routePlan": {
+        "primaryRoute": "scientific",
+        "routes": [
+          "scientific"
+        ],
+        "rationale": "指标和安全性问题需基于临床试验和观察性研究",
+        "sourcePriorities": [
+          "随机对照试验",
+          "队列研究",
+          "系统综述/Meta分析",
+          "系统综述或荟萃分析",
+          "直接回答命题的同行评议研究",
+          "研究注册与原始数据"
+        ],
+        "freshnessRequired": false
+      },
+      "specialistReview": {
+        "criticType": "scientific",
+        "overallAssessment": "证据有限，仅一项系统综述和一项RCT，且未直接报告DHA对血脂、炎症标志物和安全性的影响，无法确认无改善或存在安全性问题。",
+        "designQuality": {
+          "score": 0.55,
+          "status": "mixed",
+          "explanation": "包含一项系统综述和一项RCT，但RCT主要结局为认知功能，未报告血脂和炎症标志物。"
+        },
+        "biasControl": {
+          "score": 0.55,
+          "status": "mixed",
+          "explanation": "系统综述方法严谨，但RCT未报告盲法和分配隐藏细节。"
+        },
+        "directness": {
+          "score": 0.24,
+          "status": "weak",
+          "explanation": "证据未直接评估DHA对血脂、炎症标志物或安全性的影响，仅间接相关。"
+        },
+        "precision": {
+          "score": 0,
+          "status": "unknown",
+          "explanation": "未提供相关结局的效应量和置信区间。"
+        },
+        "sourceIntegrity": {
+          "score": 0.82,
+          "status": "strong",
+          "explanation": "来源为Cochrane系统综述和同行评议期刊，无撤稿或注册异常线索。"
+        },
+        "limitations": [
+          "缺乏直接评估DHA对血脂和炎症标志物的证据",
+          "未报告安全性结局"
+        ],
+        "evidenceIds": [
+          "claim-3-pm-32114706",
+          "claim-3-pm-40044083"
+        ],
+        "reviewedBy": "llm"
+      }
+    }
+  ],
+  "methodology": {
+    "version": "SourceLens Evidence Review · 2.2.0",
+    "searchProvider": "DuckDuckGo HTML + PubMed + OpenAlex（按路线启用，最多 2 轮，带本地缓存）",
+    "pipeline": "multi_agent",
+    "llmUsed": true,
+    "planningModel": "deepseek-v4-flash",
+    "judgmentModel": "deepseek-v4-pro",
+    "visionModel": null,
+    "searchRounds": 2,
+    "tokenUsage": {
+      "promptTokens": 33367,
+      "completionTokens": 10267,
+      "totalTokens": 43634
+    },
+    "agentRuns": [
+      {
+        "id": "verification-planner",
+        "label": "Verification Planner",
+        "role": "一次完成问题消歧、必要核查点、证据路线和检索式",
+        "model": "deepseek-v4-flash",
+        "status": "completed",
+        "contextPolicy": "independent_request",
+        "detail": "采用多解释分支；生成 3 条必要核查点，替代原先四个串联规划角色。"
+      },
+      {
+        "id": "retrieval-workers",
+        "label": "Route-specific Retrieval",
+        "role": "按路线检索学术索引、官方原文与公开报道",
+        "model": "tools",
+        "status": "completed",
+        "contextPolicy": "deterministic",
+        "detail": "取得 13 项候选证据；科学路线使用 PubMed + OpenAlex + Web。"
+      },
+      {
+        "id": "trust-provenance",
+        "label": "Trust & Provenance Model",
+        "role": "按来源类别、路线适配、时效与同源关系计算透明权重",
+        "model": "rules-v1",
+        "status": "completed",
+        "contextPolicy": "deterministic",
+        "detail": "当前为可解释规则模型；不会伪称已从历史标签训练。"
+      },
+      {
+        "id": "evidence-matcher",
+        "label": "Evidence Matching Agent",
+        "role": "独立核对材料是否直接回答命题，以及支持或反驳关系",
+        "model": "deepseek-v4-flash",
+        "status": "completed",
+        "contextPolicy": "independent_request",
+        "detail": "一次独立请求核对 3 条主张、10 项预筛材料；不读取来源质量审查。"
+      },
+      {
+        "id": "source-quality-auditor",
+        "label": "Source Quality Agent",
+        "role": "独立检查来源生产方法、偏倚、精度、完整性与可追溯性",
+        "model": "deepseek-v4-pro",
+        "status": "completed",
+        "contextPolicy": "independent_request",
+        "detail": "一次独立请求审查 3 条主张；只读取原始材料，不读取 Evidence Matching Agent 的判断。"
+      },
+      {
+        "id": "adaptive-falsifier",
+        "label": "Falsification Agent · 按需启动",
+        "role": "在高风险、单边证据或核验分歧时主动寻找反证路径",
+        "model": "deepseek-v4-flash",
+        "status": "completed",
+        "contextPolicy": "independent_request",
+        "detail": "对 1 条触发条件的主张独立提出证伪查询；未读取最终裁决。"
+      },
+      {
+        "id": "falsification-retrieval",
+        "label": "Counter-evidence Retrieval",
+        "role": "只在触发条件成立时执行额外反证检索",
+        "model": "tools",
+        "status": "completed",
+        "contextPolicy": "deterministic",
+        "detail": "为 1 条主张增加一轮反证检索，候选证据净变化 3 项。"
+      },
+      {
+        "id": "evidence-matcher-after-falsification",
+        "label": "Evidence Matching Agent · 反证后复核",
+        "role": "独立核对材料是否直接回答命题，以及支持或反驳关系",
+        "model": "deepseek-v4-flash",
+        "status": "completed",
+        "contextPolicy": "independent_request",
+        "detail": "一次独立请求核对 1 条主张、8 项预筛材料；不读取来源质量审查。"
+      },
+      {
+        "id": "source-quality-auditor-after-falsification",
+        "label": "Source Quality Agent · 反证后复核",
+        "role": "独立检查来源生产方法、偏倚、精度、完整性与可追溯性",
+        "model": "deepseek-v4-pro",
+        "status": "completed",
+        "contextPolicy": "independent_request",
+        "detail": "一次独立请求审查 1 条主张；只读取原始材料，不读取 Evidence Matching Agent 的判断。"
+      },
+      {
+        "id": "final-judge",
+        "label": "Final Judge",
+        "role": "综合原始证据、命题匹配、来源质量与按需反证结果",
+        "model": "deepseek-v4-pro",
+        "status": "completed",
+        "contextPolicy": "structured_handoff",
+        "detail": "只接收结构化交接，不使用模型记忆补充来源。"
+      },
+      {
+        "id": "citation-verifier",
+        "label": "Citation Verifier",
+        "role": "拒绝虚构证据 ID，并校验证据可读性、直接性与独立来源组",
+        "model": "rules-v1",
+        "status": "completed",
+        "contextPolicy": "deterministic",
+        "detail": "最终裁决仍需通过确定性引用与置信度护栏。"
+      }
+    ],
+    "trustModel": "Trust & Provenance rules-v1（来源类别 × 证据路线 × 时效 × 同源关系；尚未使用历史标签训练）",
+    "limitations": [
+      "结论只基于本轮实际取得的网页、论文摘要或元数据；模型记忆不作为证据。",
+      "命题匹配与来源质量由两个隔离上下文的 LLM 请求独立核验；最终结论不是 Agent 多数投票。",
+      "反证 Agent 只在高风险、证据单边、核验分歧或来源完整性偏弱时按需启动。",
+      "PubMed 与 OpenAlex 提供学术发现和摘要索引，不等于完成全文方法审查；仅有元数据的论文不能支持结论。",
+      "公开检索可能遗漏动态页面、付费全文、数据库记录和未被索引的一手材料。",
+      "Trust Model 当前是透明规则先验而非已训练模型；其分数只用于排序和置信度护栏。",
+      "谬误卡表示带文本依据的疑似推理风险，不是对作者动机或人格的判断。",
+      "论证评分经过确定性上限约束，但自然语言重建仍可能遗漏隐含前提。",
+      "高风险领域的报告仅供信息核查，不能替代专业意见。"
+    ]
+  }
+}
