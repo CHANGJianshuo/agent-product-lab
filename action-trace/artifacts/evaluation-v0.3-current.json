@@ -1,0 +1,655 @@
+[
+  {
+    "provider": "rules",
+    "cases": 52,
+    "expected_events": 48,
+    "predicted_events": 34,
+    "true_positive": 27,
+    "false_positive": 7,
+    "false_negative": 21,
+    "precision": 0.7941,
+    "recall": 0.5625,
+    "f1": 0.6585,
+    "change_accuracy": 1.0,
+    "owner_exact_match": 0.8462,
+    "due_exact_match": 1.0,
+    "title_match": 0.9259,
+    "latency_ms": 15,
+    "prompt_tokens": 0,
+    "completion_tokens": 0,
+    "failed_cases": [
+      {
+        "id": "explicit-negation",
+        "expected": [],
+        "actual": [
+          {
+            "message_index": 1,
+            "kind": "task",
+            "change_type": "create",
+            "title": "这次上线，也没答应",
+            "owner": "我不会",
+            "due_at": "2026-09-04T18:00:00+08:00"
+          }
+        ],
+        "mismatch_fields": []
+      },
+      {
+        "id": "two-message-tasks",
+        "expected": [
+          {
+            "message_index": 1,
+            "kind": "task",
+            "change_type": "create",
+            "title": "完成登录页",
+            "owner": "小林",
+            "due_at": "2026-09-04T18:00:00+08:00"
+          },
+          {
+            "message_index": 2,
+            "kind": "task",
+            "change_type": "create",
+            "title": "提交接口文档",
+            "owner": "阿哲",
+            "due_at": "2026-09-05T10:00:00+08:00"
+          }
+        ],
+        "actual": [],
+        "mismatch_fields": []
+      },
+      {
+        "id": "json-shape",
+        "expected": [
+          {
+            "message_index": 1,
+            "kind": "task",
+            "change_type": "create",
+            "title": "整理竞品清单",
+            "owner": "小李",
+            "due_at": "2026-09-04T14:00:00+08:00"
+          }
+        ],
+        "actual": [],
+        "mismatch_fields": []
+      },
+      {
+        "id": "english-commitment",
+        "expected": [
+          {
+            "message_index": 1,
+            "kind": "task",
+            "change_type": "create",
+            "title": "send the API contract",
+            "owner": "Alex"
+          }
+        ],
+        "actual": [],
+        "mismatch_fields": []
+      },
+      {
+        "id": "reported-speech-not-commitment",
+        "expected": [],
+        "actual": [
+          {
+            "message_index": 1,
+            "kind": "task",
+            "change_type": "create",
+            "title": "小林刚才说过‘发布’，但那是引用旧消息，不是新承诺",
+            "owner": "安然",
+            "due_at": null
+          }
+        ],
+        "mismatch_fields": []
+      },
+      {
+        "id": "month-day-date",
+        "expected": [
+          {
+            "message_index": 1,
+            "kind": "task",
+            "change_type": "create",
+            "title": "完成压测",
+            "owner": "阿哲",
+            "due_at": "2026-09-10T18:00:00+08:00"
+          }
+        ],
+        "actual": [
+          {
+            "message_index": 1,
+            "kind": "task",
+            "change_type": "create",
+            "title": "阿哲 9 月 10 压测",
+            "owner": null,
+            "due_at": "2026-09-10T18:00:00+08:00"
+          }
+        ],
+        "mismatch_fields": [
+          "owner"
+        ]
+      },
+      {
+        "id": "this-friday",
+        "expected": [
+          {
+            "message_index": 1,
+            "kind": "task",
+            "change_type": "create",
+            "title": "整理访谈纪要",
+            "owner": "小周",
+            "due_at": "2026-09-04T18:00:00+08:00"
+          }
+        ],
+        "actual": [],
+        "mismatch_fields": []
+      },
+      {
+        "id": "tonight-eight",
+        "expected": [
+          {
+            "message_index": 1,
+            "kind": "task",
+            "change_type": "create",
+            "title": "发送错误日志",
+            "owner": "阿哲",
+            "due_at": "2026-09-03T20:00:00+08:00"
+          }
+        ],
+        "actual": [],
+        "mismatch_fields": []
+      },
+      {
+        "id": "day-after-tomorrow",
+        "expected": [
+          {
+            "message_index": 1,
+            "kind": "task",
+            "change_type": "create",
+            "title": "提交组件清单",
+            "owner": "小林",
+            "due_at": "2026-09-05T10:00:00+08:00"
+          }
+        ],
+        "actual": [],
+        "mismatch_fields": []
+      },
+      {
+        "id": "asap-needs-clarification",
+        "expected": [
+          {
+            "message_index": 1,
+            "kind": "task",
+            "change_type": "create",
+            "title": "整理埋点方案",
+            "owner": "小林",
+            "due_at": null
+          }
+        ],
+        "actual": [],
+        "mismatch_fields": []
+      },
+      {
+        "id": "delay-risk",
+        "expected": [
+          {
+            "message_index": 1,
+            "kind": "risk",
+            "change_type": "record",
+            "title": "供应商素材未到可能影响周五发布"
+          }
+        ],
+        "actual": [
+          {
+            "message_index": 1,
+            "kind": "risk",
+            "change_type": "record",
+            "title": "供应商素材还没到，不及",
+            "owner": "小周",
+            "due_at": "2026-09-04T18:00:00+08:00"
+          }
+        ],
+        "mismatch_fields": [
+          "title"
+        ]
+      },
+      {
+        "id": "decision-question",
+        "expected": [],
+        "actual": [
+          {
+            "message_index": 1,
+            "kind": "decision",
+            "change_type": "record",
+            "title": "我们是不是要决定用 ECharts？先讨论一下",
+            "owner": "安然",
+            "due_at": null
+          }
+        ],
+        "mismatch_fields": []
+      },
+      {
+        "id": "do-not-cancel",
+        "expected": [],
+        "actual": [
+          {
+            "message_index": 1,
+            "kind": "task",
+            "change_type": "cancel",
+            "title": "登录页不要",
+            "owner": null,
+            "due_at": null
+          }
+        ],
+        "mismatch_fields": []
+      },
+      {
+        "id": "repeat-message",
+        "expected": [
+          {
+            "message_index": 1,
+            "kind": "task",
+            "change_type": "create",
+            "title": "完成登录页",
+            "owner": "小林",
+            "due_at": "2026-09-04T18:00:00+08:00"
+          },
+          {
+            "message_index": 2,
+            "kind": "task",
+            "change_type": "create",
+            "title": "完成登录页",
+            "owner": "小林",
+            "due_at": "2026-09-04T18:00:00+08:00"
+          }
+        ],
+        "actual": [],
+        "mismatch_fields": []
+      },
+      {
+        "id": "two-actions-one-message",
+        "expected": [
+          {
+            "message_index": 1,
+            "kind": "task",
+            "change_type": "create",
+            "title": "完成登录页",
+            "owner": "小林",
+            "due_at": "2026-09-04T18:00:00+08:00"
+          },
+          {
+            "message_index": 1,
+            "kind": "task",
+            "change_type": "create",
+            "title": "提交组件说明",
+            "owner": "小林",
+            "due_at": "2026-09-05T18:00:00+08:00"
+          }
+        ],
+        "actual": [],
+        "mismatch_fields": []
+      },
+      {
+        "id": "json-record-aliases",
+        "expected": [
+          {
+            "message_index": 1,
+            "kind": "task",
+            "change_type": "create",
+            "title": "修复登录超时问题",
+            "owner": "阿哲",
+            "due_at": "2026-09-04T18:00:00+08:00"
+          }
+        ],
+        "actual": [],
+        "mismatch_fields": []
+      },
+      {
+        "id": "sarcasm-no-commitment",
+        "expected": [],
+        "actual": [
+          {
+            "message_index": 1,
+            "kind": "task",
+            "change_type": "create",
+            "title": "行行行，全世界的 bug 修，满意了吧",
+            "owner": "小林",
+            "due_at": null
+          }
+        ],
+        "mismatch_fields": []
+      },
+      {
+        "id": "old-quote-no-new-task",
+        "expected": [],
+        "actual": [
+          {
+            "message_index": 1,
+            "kind": "task",
+            "change_type": "create",
+            "title": "会议记录里写的是“调研”，这里只是回顾，不要新建",
+            "owner": null,
+            "due_at": null
+          }
+        ],
+        "mismatch_fields": []
+      },
+      {
+        "id": "decision-and-risk",
+        "expected": [
+          {
+            "message_index": 1,
+            "kind": "decision",
+            "change_type": "record",
+            "title": "首版使用 A 方案"
+          },
+          {
+            "message_index": 1,
+            "kind": "risk",
+            "change_type": "record",
+            "title": "支付资质可能来不及"
+          }
+        ],
+        "actual": [
+          {
+            "message_index": 1,
+            "kind": "risk",
+            "change_type": "record",
+            "title": "确定首版使用 A 方案；不及，是当前风险",
+            "owner": "安然",
+            "due_at": null
+          }
+        ],
+        "mismatch_fields": []
+      },
+      {
+        "id": "at-mention-owner",
+        "expected": [
+          {
+            "message_index": 1,
+            "kind": "task",
+            "change_type": "create",
+            "title": "准备演示账号",
+            "owner": "小李",
+            "due_at": "2026-09-04T17:00:00+08:00"
+          }
+        ],
+        "actual": [
+          {
+            "message_index": 1,
+            "kind": "task",
+            "change_type": "create",
+            "title": "@小李 准备演示账号",
+            "owner": null,
+            "due_at": "2026-09-04T17:00:00+08:00"
+          }
+        ],
+        "mismatch_fields": [
+          "owner"
+        ]
+      },
+      {
+        "id": "date-without-time",
+        "expected": [
+          {
+            "message_index": 1,
+            "kind": "task",
+            "change_type": "create",
+            "title": "完成问卷清洗",
+            "owner": "小周",
+            "due_at": "2026-09-12T18:00:00+08:00"
+          }
+        ],
+        "actual": [],
+        "mismatch_fields": []
+      },
+      {
+        "id": "year-end-relative-date",
+        "expected": [
+          {
+            "message_index": 1,
+            "kind": "task",
+            "change_type": "create",
+            "title": "提交年终总结",
+            "owner": "小林",
+            "due_at": "2026-12-31T16:00:00+08:00"
+          }
+        ],
+        "actual": [],
+        "mismatch_fields": []
+      },
+      {
+        "id": "next-tuesday",
+        "expected": [
+          {
+            "message_index": 1,
+            "kind": "task",
+            "change_type": "create",
+            "title": "完成接口鉴权",
+            "owner": "阿哲",
+            "due_at": "2026-09-08T18:00:00+08:00"
+          }
+        ],
+        "actual": [],
+        "mismatch_fields": []
+      },
+      {
+        "id": "complete-and-new-task",
+        "expected": [
+          {
+            "message_index": 1,
+            "kind": "task",
+            "change_type": "complete",
+            "title": "登录页"
+          },
+          {
+            "message_index": 1,
+            "kind": "task",
+            "change_type": "create",
+            "title": "补充交互说明",
+            "owner": "小林",
+            "due_at": "2026-09-05T18:00:00+08:00"
+          }
+        ],
+        "actual": [
+          {
+            "message_index": 1,
+            "kind": "task",
+            "change_type": "complete",
+            "title": "登录页",
+            "owner": "小林",
+            "due_at": null
+          }
+        ],
+        "mismatch_fields": []
+      },
+      {
+        "id": "injection-plus-valid-message",
+        "expected": [
+          {
+            "message_index": 2,
+            "kind": "task",
+            "change_type": "create",
+            "title": "提交访谈报告",
+            "owner": "小周",
+            "due_at": "2026-09-05T14:00:00+08:00"
+          }
+        ],
+        "actual": [],
+        "mismatch_fields": []
+      },
+      {
+        "id": "explicit-blocker-and-owner",
+        "expected": [
+          {
+            "message_index": 1,
+            "kind": "task",
+            "change_type": "create",
+            "title": "接口联调",
+            "owner": "阿哲",
+            "due_at": null
+          },
+          {
+            "message_index": 1,
+            "kind": "risk",
+            "change_type": "record",
+            "title": "测试环境没有权限"
+          }
+        ],
+        "actual": [
+          {
+            "message_index": 1,
+            "kind": "risk",
+            "change_type": "record",
+            "title": "接口联调，但测试环境没权限，当前被阻塞",
+            "owner": "阿哲",
+            "due_at": null
+          }
+        ],
+        "mismatch_fields": [
+          "title"
+        ]
+      }
+    ]
+  },
+  {
+    "provider": "deepseek",
+    "cases": 52,
+    "expected_events": 48,
+    "predicted_events": 47,
+    "true_positive": 47,
+    "false_positive": 0,
+    "false_negative": 1,
+    "precision": 1.0,
+    "recall": 0.9792,
+    "f1": 0.9895,
+    "change_accuracy": 1.0,
+    "owner_exact_match": 1.0,
+    "due_exact_match": 1.0,
+    "title_match": 0.9362,
+    "latency_ms": 100932,
+    "prompt_tokens": 33851,
+    "completion_tokens": 4025,
+    "failed_cases": [
+      {
+        "id": "tonight-eight",
+        "expected": [
+          {
+            "message_index": 1,
+            "kind": "task",
+            "change_type": "create",
+            "title": "发送错误日志",
+            "owner": "阿哲",
+            "due_at": "2026-09-03T20:00:00+08:00"
+          }
+        ],
+        "actual": [
+          {
+            "message_index": 1,
+            "kind": "task",
+            "change_type": "create",
+            "title": "把错误日志发出来",
+            "owner": "阿哲",
+            "due_at": "2026-09-03T20:00:00+08:00"
+          }
+        ],
+        "mismatch_fields": [
+          "title"
+        ]
+      },
+      {
+        "id": "delay-risk",
+        "expected": [
+          {
+            "message_index": 1,
+            "kind": "risk",
+            "change_type": "record",
+            "title": "供应商素材未到可能影响周五发布"
+          }
+        ],
+        "actual": [
+          {
+            "message_index": 1,
+            "kind": "risk",
+            "change_type": "record",
+            "title": "供应商素材未到，周五发布可能来不及",
+            "owner": null,
+            "due_at": null
+          }
+        ],
+        "mismatch_fields": [
+          "title"
+        ]
+      },
+      {
+        "id": "repeat-message",
+        "expected": [
+          {
+            "message_index": 1,
+            "kind": "task",
+            "change_type": "create",
+            "title": "完成登录页",
+            "owner": "小林",
+            "due_at": "2026-09-04T18:00:00+08:00"
+          },
+          {
+            "message_index": 2,
+            "kind": "task",
+            "change_type": "create",
+            "title": "完成登录页",
+            "owner": "小林",
+            "due_at": "2026-09-04T18:00:00+08:00"
+          }
+        ],
+        "actual": [
+          {
+            "message_index": 1,
+            "kind": "task",
+            "change_type": "create",
+            "title": "完成登录页",
+            "owner": "小林",
+            "due_at": "2026-09-04T18:00:00+08:00"
+          }
+        ],
+        "mismatch_fields": []
+      },
+      {
+        "id": "explicit-blocker-and-owner",
+        "expected": [
+          {
+            "message_index": 1,
+            "kind": "task",
+            "change_type": "create",
+            "title": "接口联调",
+            "owner": "阿哲",
+            "due_at": null
+          },
+          {
+            "message_index": 1,
+            "kind": "risk",
+            "change_type": "record",
+            "title": "测试环境没有权限"
+          }
+        ],
+        "actual": [
+          {
+            "message_index": 1,
+            "kind": "task",
+            "change_type": "create",
+            "title": "负责接口联调",
+            "owner": "阿哲",
+            "due_at": null
+          },
+          {
+            "message_index": 1,
+            "kind": "risk",
+            "change_type": "record",
+            "title": "测试环境无权限导致接口联调被阻塞",
+            "owner": "阿哲",
+            "due_at": null
+          }
+        ],
+        "mismatch_fields": [
+          "title"
+        ]
+      }
+    ]
+  }
+]

@@ -1,0 +1,41 @@
+# Secrets
+.env
+.env.*
+!.env.example
+**/.env
+**/.env.*
+!**/.env.example
+
+# Dependencies and builds
+**/node_modules/
+**/dist/
+**/.vite/
+
+# Python
+**/__pycache__/
+**/*.py[cod]
+**/.pytest_cache/
+**/.venv/
+
+# Runtime data and caches
+**/*.db
+**/*.db-*
+**/.sourcelens-cache/
+**/*.log
+
+# Raw and generated production media
+source-lens/demo/build/
+source-lens/demo/product-recording/raw/
+source-lens/demo/product-recording/edit/
+source-lens/demo/product-recording/review/
+source-lens/demo/product-recording/*.webm
+action-trace/artifacts/demo-production/raw/
+action-trace/artifacts/demo-production/*.wav
+
+# OS and editor
+.DS_Store
+.idea/
+.vscode/
+
+# Private resume/interview working notes
+*-简历素材.md

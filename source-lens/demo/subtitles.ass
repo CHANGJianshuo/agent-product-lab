@@ -1,0 +1,21 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 1920
+PlayResY: 1080
+WrapStyle: 2
+ScaledBorderAndShadow: yes
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei UI,34,&H00FFFFFF,&H000000FF,&H00000000,&H980F1913,0,0,0,0,100,100,0,0,3,0,0,2,120,120,26,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.00,0:00:05.00,Default,,0,0,0,,这是一次真实 DeepSeek 核查，运行编号 22067e6a。\N待核查说法是：鱼油中的 DHA 成分对成年人无效。
+Dialogue: 0,0:00:05.00,0:00:11.50,Default,,0,0,0,,“无效”是一个全称判断，却没有限定人群、配方和健康结局。\N这些边界不明确，任何简单的是或否都可能误导。
+Dialogue: 0,0:00:11.50,0:00:18.50,Default,,0,0,0,,DeepSeek 规划器实际生成 3 个核查点：功能、临床结局，以及指标和安全性。\N每个核查点独立检索、独立裁决。
+Dialogue: 0,0:00:18.50,0:00:26.50,Default,,0,0,0,,真实检索取得 16 项候选、14 项可读材料。\N科学路线优先 PubMed 与 OpenAlex，普通网页不主导结论。
+Dialogue: 0,0:00:26.50,0:00:35.00,Default,,0,0,0,,Matching Agent 使用 deepseek-v4-flash，Quality Agent 使用 deepseek-v4-pro。\N两次请求上下文隔离，真实状态均为完成。
+Dialogue: 0,0:00:35.00,0:00:42.00,Default,,0,0,0,,这里展示的是本次运行真正进入裁决的三项高排名证据。\N方向不同并不自动冲突，必须同时检查人群、结局和直接性。
+Dialogue: 0,0:00:42.00,0:00:50.00,Default,,0,0,0,,本次反证 Agent 状态为已触发。\N是否增加模型调用由证据风险决定，不为展示流程而强行执行。
+Dialogue: 0,0:00:50.00,0:00:56.00,Default,,0,0,0,,最终裁决为可靠冲突，本次真实调用共使用 43,634 tokens。\N它反驳的是全称“无效”，并不等于 DHA 对所有结局都有效。

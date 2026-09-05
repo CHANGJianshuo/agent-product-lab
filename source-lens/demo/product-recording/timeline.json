@@ -1,0 +1,134 @@
+{
+  "claim": "鱼油中的 DHA 成分对成年人无效",
+  "productUrl": "http://localhost:8787",
+  "events": [
+    {
+      "type": "view",
+      "label": "产品首页",
+      "time": 5.093
+    },
+    {
+      "type": "action",
+      "label": "输入待核查命题",
+      "time": 7.622
+    },
+    {
+      "type": "action",
+      "label": "点击开始核查",
+      "time": 11.241
+    },
+    {
+      "type": "progress",
+      "label": "正在一次完成消歧、拆题和检索规划",
+      "time": 11.262,
+      "detail": ""
+    },
+    {
+      "type": "progress",
+      "label": "核查点 2 · 第 1 轮检索",
+      "time": 18.463,
+      "detail": ""
+    },
+    {
+      "type": "progress",
+      "label": "核查点 3 · 第 1 轮检索",
+      "time": 18.729,
+      "detail": ""
+    },
+    {
+      "type": "progress",
+      "label": "两个独立核验正在交叉检查真实性",
+      "time": 21.665,
+      "detail": ""
+    },
+    {
+      "type": "progress",
+      "label": "正在综合证据并生成有边界的结论",
+      "time": 39.273,
+      "detail": ""
+    },
+    {
+      "type": "view",
+      "label": "核查结果总览",
+      "time": 130.644
+    },
+    {
+      "type": "result",
+      "label": "已找到相关材料，但证据仍不足",
+      "time": 133.867,
+      "id": "1dc557eb-3a4f-406a-ab04-caa673c77603",
+      "verdict": "insufficient",
+      "tokens": 28838
+    },
+    {
+      "type": "view",
+      "label": "问题范围与三个核查分支",
+      "time": 133.873
+    },
+    {
+      "type": "view",
+      "label": "核查点一的有边界结论",
+      "time": 137.387
+    },
+    {
+      "type": "view",
+      "label": "独立来源质量核验",
+      "time": 141.106
+    },
+    {
+      "type": "action",
+      "label": "展开研究质量五维检查",
+      "time": 144.588
+    },
+    {
+      "type": "view",
+      "label": "查看可追溯科研证据",
+      "time": 147.392
+    },
+    {
+      "type": "view",
+      "label": "核查点二：心血管硬结局",
+      "time": 152.373
+    },
+    {
+      "type": "action",
+      "label": "展开核查点二",
+      "time": 154.853
+    },
+    {
+      "type": "view",
+      "label": "核查点三：指标与安全性",
+      "time": 160.185
+    },
+    {
+      "type": "action",
+      "label": "展开核查点三",
+      "time": 162.695
+    },
+    {
+      "type": "view",
+      "label": "查看多 Agent 技术执行记录",
+      "time": 165.7
+    },
+    {
+      "type": "action",
+      "label": "展开多 Agent 执行记录",
+      "time": 168.204
+    },
+    {
+      "type": "view",
+      "label": "核对各 Agent 状态与上下文策略",
+      "time": 170.515
+    },
+    {
+      "type": "view",
+      "label": "返回最终结论",
+      "time": 175.023
+    },
+    {
+      "type": "end",
+      "label": "录制结束",
+      "time": 180.063
+    }
+  ]
+}
